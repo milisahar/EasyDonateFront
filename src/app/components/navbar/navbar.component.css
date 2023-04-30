@@ -1,0 +1,21 @@
+.mat-toolbar{
+
+}
+.mat-toolbar button{
+	position: fixed;
+	z-index: 1000;
+	background-color: transparent;
+	color: #CC9933 ;
+	border: #CC9933;
+	border-radius: 20px;
+	border:solid 1px;
+	width: 100px;
+	align-items: end;
+	margin-left: 75%;
+
+}
+.mat-toolbar button a{
+
+	color: #CC9933 !important ;
+
+}

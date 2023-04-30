@@ -1,0 +1,53 @@
+
+    <div class="main-content">
+        <div class="container-fluid">
+            <div class="row">
+            
+                <div class="col-md-12">
+                    <div class="card card-plain">
+                        <div class="card-header card-header-primary">
+                            <h4 class="card-title mt-0"> fundraiser List</h4>
+                            <p class="card-category"> Here is a list of all the fundraisers</p>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead class="">
+                                        <tr class="table-danger" class="text-success">
+                                            <th>Title</th>
+                                            <th>Goal</th>
+                                            <th>Deadline</th>
+                                            <th>Progress Status</th>
+                                            <th>target</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody >
+                                        <tr *ngFor=" let fundraiser of fundraisers">
+                                            <td>{{fundraiser.title}}</td>
+                                            <td>{{fundraiser.goal}}</td>
+                                            <td>{{fundraiser.deadline}}</td>
+                                             <td>{{fundraiser.progressStatus}}</td>
+                                             <td>{{fundraiser.target}}</td>
+                                             <td class="td-actions ">
+                                                <button mat-raised-button type="button" matTooltip="Edit Task" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon" (click)="updateFundraiser(fundraiser.fundraiser_id)">
+                                                    <i class="material-icons">edit</i>
+                                                </button>
+                                                <button mat-raised-button type="button" matTooltip="Remove" [matTooltipPosition]="'above'" class="btn btn-danger btn-link btn-sm btn-just-icon" (click)="deleteFundraiser(fundraiser.fundraiser_id)">
+                                                    <i class="material-icons">delete</i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+     
+    
+              
+        
