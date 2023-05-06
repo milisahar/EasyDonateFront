@@ -18,9 +18,6 @@ export const ROUTES: RouteInfo[] = [
     { path: '/maps', title: 'Maps',  icon:'location_on', class: '' },
     { path: '/notifications', title: 'Notifications',  icon:'notifications', class: '' },
     { path: '/upgrade', title: 'Upgrade to PRO',  icon:'unarchive', class: 'active-pro' },
-    { path: '/event', title: 'event',  icon:'event', class: '' },
-    { path: '/CreateEvent', title: 'Create Event    ',  icon:'dashboard', class: '' },
-
     
 ];
 

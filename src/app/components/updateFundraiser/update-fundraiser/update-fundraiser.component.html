@@ -10,28 +10,34 @@
     </div>
     <div class="example-container">
       <mat-form-field appearance="fill">
-        <mat-label>place </mat-label>
-        <input matInput  formControlName="place" >
+        <mat-label>goal </mat-label>
+        <input matInput placeholder="pat@example.com" formControlName="goal" >
         <mat-error >test</mat-error>
       </mat-form-field>
     </div>
     <div class="example-container">
       <mat-form-field appearance="fill">
         <mat-label>description</mat-label>
-        <input matInput  formControlName="description" >
+        <input matInput placeholder="pat@example.com" formControlName="description" >
         <mat-error >test</mat-error>
       </mat-form-field>
     </div>
     
     <mat-form-field appearance="fill">
-      <mat-label>type</mat-label>
-      <mat-select  formControlName="type">
+      <mat-label>status</mat-label>
+      <mat-select  formControlName="status">
         <mat-option *ngFor="let status of status" [value]="status.value" >
           {{status.viewValue}}
         </mat-option>
       </mat-select>
     </mat-form-field>
-
+    <div class="example-container">
+      <mat-form-field appearance="fill">
+        <mat-label>target</mat-label>
+        <input matInput placeholder="pat@example.com" formControlName="target"  >
+        <mat-error >test</mat-error>
+      </mat-form-field>
+    </div>
     <button class="btn btn-primary button" (click)="updatefundraiser()">Update</button>
   </div>
 </form>

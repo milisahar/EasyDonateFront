@@ -12,31 +12,24 @@ import { HomeComponent } from './home/home.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
-import { EventComponent } from './event/event.component';
-import { UpdateEventComponent } from './update-event/update-event.component';
-import { CreateEventComponent } from './create-event/create-event.component';
-import { DetailsEventComponent } from './details-event/details-event.component';
-import {MatDatepickerModule} from "@angular/material/datepicker";
 
 @NgModule({
-    imports: [
-        CommonModule,
-        RouterModule,
-        MatFormFieldModule,
-        MatInputModule,
-        MatSelectModule,
-        ReactiveFormsModule,
-        MatDialogModule,
-        MatToolbarModule,
-        MatIconModule,
-        MatDatepickerModule,
-        FormsModule
+  imports: [
+    CommonModule,
+    RouterModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    ReactiveFormsModule,
+    MatDialogModule,
+    MatToolbarModule,
+    MatIconModule
 
-    ],
+  ],
   declarations: [
     FooterComponent,
     NavbarComponent,
@@ -45,11 +38,7 @@ import {MatDatepickerModule} from "@angular/material/datepicker";
     FundraiserListComponent,
     UpdateFundraiserComponent,
     HomeComponent,
-    ConfirmationComponent,
-    EventComponent,
-    UpdateEventComponent,
-    CreateEventComponent,
-    DetailsEventComponent
+    ConfirmationComponent
   ],
   exports: [
     FooterComponent,

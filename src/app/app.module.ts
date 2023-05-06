@@ -10,7 +10,6 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatDatepickerModule} from '@angular/material/datepicker';
 
 @NgModule({
   imports: [
@@ -24,8 +23,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     HttpClientModule,
     MatFormFieldModule,
     MatInputModule,
-    MatToolbarModule,
-    MatDatepickerModule
+    MatToolbarModule
     
   ],
   declarations: [
