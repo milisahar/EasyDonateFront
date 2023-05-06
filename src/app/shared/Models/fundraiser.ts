@@ -15,3 +15,4 @@ export class Fundraiser {
     organizer: User
     fundDonations: FundDonation[]
 }
+

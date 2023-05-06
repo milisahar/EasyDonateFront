@@ -1,0 +1,89 @@
+
+<div id="content-page" class="content-page">
+    <div class="container">
+       <div style="margin-top: 20px">
+           <span class="example-spacer"></span>
+           <button (click)="hidetab()"  style="background-color: transparent;border: none;margin-right: 10px"  mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+               <mat-icon>menu</mat-icon>
+           </button>
+           <button (click)="hideCalender()" style="background-color: transparent;border: none;margin-right: 10px"   mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+               <mat-icon>calendar_today</mat-icon>
+           </button>
+       </div>
+        <div [hidden]="!tab" class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body chat-page p-0">
+                        <div class="chat-data-block">
+                            <div class="row">
+                                <div class="col-lg-3 chat-data-left scroller">
+                                    <div class="chat-search pt-3 ps-3 ">
+
+                                        <button type="button"class="btn btn-success fa-2x" (click)="  addevent()"> new</button>
+                                        <div class="chat-searchbar mt-4">
+                                            <div class="form-group chat-search-data m-0">
+                                                <input type="text" class="form-control round" [(ngModel)]="place" placeholder="place ...">
+                                            </div>
+                                            <button type="button"class="btn light " (click)=" findByPlace()">search by place</button>
+                                        </div>
+                                        <div class="chat-searchbar mt-4">
+                                            <div class="form-group chat-search-data m-0">
+                                                <input type="date" class="form-control" id="exampleInputdate" value=""  [(ngModel)]="date" >
+                                            </div>
+                                            <button type="button"class="btn light " (click)=" findByDate()">search by Date</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="content">
+                                    <div class="rows" *ngFor="let event of ListEvent">
+                                        <div class="imgevent">
+                                            <img style="height: 150px;width: 150px" src="./assets/event.png">
+                                        </div>
+                                        <div class=" eventContent" >
+                                            <p><span >title:</span> {{event.title}}</p>
+                                            <p><span>Date :</span>  {{event.eventDate}}</p>
+                                            <p><span>type:</span>  {{event.eventType}}</p>
+                                            <p><span>place :</span>  {{event.place}}</p>
+                                            <p><span>duration :</span>  {{event.duration}}</p>
+                                            <p><span>description :</span>  {{event.description}}</p>
+                                            <p><span>capacity:</span>  {{event.capacity}}</p>
+
+                                            <button class="btn info bt" (click)="showComments(event.id)">Comments</button>
+                                            <button class="btn btn-success bt" (click)="updateEvent(event.id)">edit</button>
+                                            <button class="btn btn-danger bt" (click)="deleteEvent(event.id)">Delete</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div [hidden]="tab" class="row">
+            <div class="col-sm-12">
+                <div class="card">
+            <full-calendar [options]="calendarOptions"></full-calendar>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <!--  <div class="content">
+         <div class="row">
+            <div class="col-lg-8 row m-0 p-0">
+              <button (click)=" openDialog()">test</button>
+              <app-forum *ngFor="let p of ListArticle" [article]="p" (DeleteArticle)="deleteArticle($event)" (updateArticle)="getArticle()"></app-forum>
+            </div>
+            <div class="col-sm-12 text-center">
+               <img src="assets/images/page-img/page-load-loader.gif" alt="loader" style="height: 100px;">
+            </div>
+         </div>
+      </div> -->
+</div>
+
+
