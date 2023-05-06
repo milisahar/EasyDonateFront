@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormControl,FormBuilder,FormGroup, Validators} from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Fundraiser } from 'app/shared/Models/fundraiser';
+
 declare var $: any;
 import { FundraiserService } from 'app/shared/Services/FundraiserService/fundraiser.service';
 interface status {

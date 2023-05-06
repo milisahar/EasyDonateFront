@@ -16,6 +16,18 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
+import { AllarticlesComponent } from './allarticles/allarticles.component';
+import { ArticleComponent } from './article/article.component';
+import { CommentComponent } from './comment/comment.component';
+import { UpdatecommentmodalComponent } from './updatecommentmodal/updatecommentmodal/updatecommentmodal.component';
+import { AllarticlesBackofficeComponent } from './allarticles-backoffice/allarticles-backoffice/allarticles-backoffice.component';
+import { AddarticleComponent } from './addarticle-backoffice/addarticle/addarticle.component';
+import { EditarticleBackofficeComponent } from './editarticle-backoffice/editarticle-backoffice/editarticle-backoffice.component';
+import { ArticleCategoryComponent } from './article-category/article-category/article-category.component';
+import { CommentsbackendComponent } from './commentsbackend/commentsbackend/commentsbackend.component';
+import { SuccessComponent } from './custom-notifs/success/success/success.component';
+import { EditarticleallComponent } from './editarticleall-backoffice/editarticleall/editarticleall.component';
+import { UploadImageComponent } from './upload-image/upload-image/upload-image.component';
 
 @NgModule({
   imports: [
@@ -38,7 +50,19 @@ import {MatIconModule} from '@angular/material/icon';
     FundraiserListComponent,
     UpdateFundraiserComponent,
     HomeComponent,
-    ConfirmationComponent
+    ConfirmationComponent,
+    AllarticlesComponent,
+    ArticleComponent,
+    CommentComponent,
+    UpdatecommentmodalComponent,
+    AllarticlesBackofficeComponent,
+    AddarticleComponent,
+    EditarticleBackofficeComponent,
+    ArticleCategoryComponent,
+    CommentsbackendComponent,
+    SuccessComponent,
+    EditarticleallComponent,
+    UploadImageComponent
   ],
   exports: [
     FooterComponent,
