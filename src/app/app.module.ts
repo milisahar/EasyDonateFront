@@ -11,6 +11,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import {FullCalendarModule} from "@fullcalendar/angular";
 
 @NgModule({
   imports: [
@@ -25,7 +26,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     MatFormFieldModule,
     MatInputModule,
     MatToolbarModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    FullCalendarModule
     
   ],
   declarations: [

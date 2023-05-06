@@ -19,6 +19,7 @@ interface type {
 export class CreateEventComponent implements OnInit {
   eventForm: FormGroup;
   event:any
+
   pendingStatus:any
   id:any
   type: type[] = [

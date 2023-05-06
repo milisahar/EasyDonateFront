@@ -4,7 +4,12 @@ import {EventService} from "../../shared/Services/EventService/event.service";
 import {Event} from "../../shared/Models/comment";
 import {MatDialog} from "@angular/material/dialog";
 import {ConfirmationComponent} from "../confirmation/confirmation.component";
-
+import {CalendarOptions} from "@fullcalendar/core";
+import dayGridPlugin from "@fullcalendar/daygrid";
+export class eventCalendar{
+  title:string
+  date:Date
+}
 @Component({
   selector: 'app-event',
   templateUrl: './event.component.html',
@@ -12,8 +17,11 @@ import {ConfirmationComponent} from "../confirmation/confirmation.component";
 })
 export class EventComponent implements OnInit {
   forum :any
+  date:any
+  tab:boolean = false
   ListEvent : Event[]
   place:any =''
+  eventCalendar: eventCalendar[] = []
 
   searchtext:any
   constructor( private router : Router , private eventSetvice : EventService,public dialog: MatDialog) { }
@@ -28,7 +36,16 @@ export class EventComponent implements OnInit {
   getAllevents(){
     this.eventSetvice.getListEvent().subscribe(res=>{
       this.ListEvent = res
+      for (var i = 0; i < res.length; i++) {
+        const e = new eventCalendar()
+          e.date = res[i].eventDate
+          e.title = res[i].title
+          this.eventCalendar.push(e)
+      }
       console.log(this.ListEvent)
+      this.calendarOptions = {
+        events: this.eventCalendar,
+      };
     })
   }
   addevent(){
@@ -82,5 +99,27 @@ export class EventComponent implements OnInit {
       console.log(res)
       this.ListEvent=res
     })
+  }
+  findByDate(){
+    this.eventSetvice.findByEventDate(this.date).subscribe(res=>{
+      console.log(res)
+      this.ListEvent=res
+    })
+  }
+  calendarOptions: CalendarOptions = {
+    initialView: 'dayGridMonth',
+    plugins: [dayGridPlugin],
+ // MUST ensure `this` context is maintained
+    events: [
+      { title: 'event 1', date: '2019-04-01' },
+      { title: 'event 2', date: '2019-04-02' }
+    ]
+  };
+
+  hidetab() {
+  this.tab=true
+  }
+  hideCalender(){
+    this.tab=false
   }
 }

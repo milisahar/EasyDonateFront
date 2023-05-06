@@ -21,6 +21,7 @@ import { UpdateEventComponent } from './update-event/update-event.component';
 import { CreateEventComponent } from './create-event/create-event.component';
 import { DetailsEventComponent } from './details-event/details-event.component';
 import {MatDatepickerModule} from "@angular/material/datepicker";
+import {FullCalendarModule} from "@fullcalendar/angular";
 
 @NgModule({
     imports: [
@@ -34,7 +35,8 @@ import {MatDatepickerModule} from "@angular/material/datepicker";
         MatToolbarModule,
         MatIconModule,
         MatDatepickerModule,
-        FormsModule
+        FormsModule,
+        FullCalendarModule
 
     ],
   declarations: [

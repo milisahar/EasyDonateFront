@@ -1,7 +1,16 @@
 
 <div id="content-page" class="content-page">
     <div class="container">
-        <div class="row">
+       <div style="margin-top: 20px">
+           <span class="example-spacer"></span>
+           <button (click)="hidetab()"  style="background-color: transparent;border: none;margin-right: 10px"  mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+               <mat-icon>menu</mat-icon>
+           </button>
+           <button (click)="hideCalender()" style="background-color: transparent;border: none;margin-right: 10px"   mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+               <mat-icon>calendar_today</mat-icon>
+           </button>
+       </div>
+        <div [hidden]="!tab" class="row">
             <div class="col-sm-12">
                 <div class="card">
                     <div class="card-body chat-page p-0">
@@ -15,7 +24,13 @@
                                             <div class="form-group chat-search-data m-0">
                                                 <input type="text" class="form-control round" [(ngModel)]="place" placeholder="place ...">
                                             </div>
-                                            <button type="button"class="btn light " (click)=" findByPlace()">search</button>
+                                            <button type="button"class="btn light " (click)=" findByPlace()">search by place</button>
+                                        </div>
+                                        <div class="chat-searchbar mt-4">
+                                            <div class="form-group chat-search-data m-0">
+                                                <input type="date" class="form-control" id="exampleInputdate" value=""  [(ngModel)]="date" >
+                                            </div>
+                                            <button type="button"class="btn light " (click)=" findByDate()">search by Date</button>
                                         </div>
                                     </div>
 
@@ -48,6 +63,15 @@
                 </div>
             </div>
         </div>
+        <div [hidden]="tab" class="row">
+            <div class="col-sm-12">
+                <div class="card">
+            <full-calendar [options]="calendarOptions"></full-calendar>
+                </div>
+            </div>
+        </div>
+
+
     </div>
     <!--  <div class="content">
          <div class="row">
@@ -61,5 +85,5 @@
          </div>
       </div> -->
 </div>
- 
- 
+
+

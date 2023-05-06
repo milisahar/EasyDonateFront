@@ -33,11 +33,12 @@ export class EventService {
     return this.httpClient.get<any>(`${this.baseURL}/event/`+type);
   }
   findByEventDate(date:any){
-    return this.httpClient.get<any>(`${this.baseURL}/event/`+date);
+    return this.httpClient.get<any>(`${this.baseURL}/event/date/`+date);
   }
   findByEventPlace(place:any){
     return this.httpClient.get<any>(`${this.baseURL}/event/place/`+place);
   }
+
   addCommentToEvent(id :any ,comment:any){
     return this.httpClient.post(`${this.baseURL}/eventComment/add/`+id,comment)
   }
