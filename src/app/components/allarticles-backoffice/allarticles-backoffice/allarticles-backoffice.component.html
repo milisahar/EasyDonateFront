@@ -1,0 +1,84 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card card-plain">
+                    <div class="card-header" style="background: linear-gradient(15deg,  #a6a9df, #b8860b);">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4 class="card-title mt-0">Articles List</h4>
+                            </div>
+                            <div class="col-md-6 text-right">
+                                <button mat-raised-button class="btn btn-default" routerLink="/addarticle"><span class="material-icons">
+                                    add
+                                    </span> Article</button>
+                                    
+                            </div>
+                          
+                            
+                            
+                        </div>
+                        <p class="card-category">Here is a list of all articles</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead class="">
+                                    <th style="text-align: right;">
+                                        Title 
+                                    </th>
+                                    <th style="text-align: right;">
+                                        Description
+                                    </th>
+                                    <th style="text-align: right;">
+                                        Content
+                                    </th>
+                                    <th style="text-align: right;">
+                                       Category
+                                    </th>
+                                    <th style="text-align: right;">
+                                        Date
+                                     </th>
+                                    <th style="text-align: right;">Action</th>
+                                </thead>
+                                <tbody *ngFor="let a of articles">
+                                    <tr>
+                                        <td class="text-right">{{a.title}}</td>
+                                        <td class="text-right">{{a.description}}</td>
+                                        <td class="text-right">{{a.content}}</td>
+                                        <td class="text-right">{{ a.categoryName }}</td>
+                                        <td class="text-right">{{ a.publishDate | date: 'dd/MM/yyyy' }}</td>
+
+                                    
+
+                                        <td class="text-right">
+
+                                            <button mat-raised-button class="btn btn-default" (click)="goToComments(a.id)"><i class="material-icons">chat</i></button>
+
+
+                                            <button mat-raised-button class="btn btn-default" (click)="addTags(a.id)"><span class="material-icons">
+                                                sell
+                                                </span></button>
+                                                
+
+                                            <button mat-raised-button class="btn btn-default" (click)="editArticle(a.id)"><span class="material-icons">
+                                                edit
+                                                </span></button>
+
+                                                <button mat-raised-button class="btn btn-default" (click)="deleteArticle(a.id)"><i class="material-icons">delete</i></button>
+
+                                                                                            <button *ngIf="a.img == null" class="btn btn-image" style="margin-right: 10px; margin-top: 10px;" routerLink="/AddImage/{{ a.id }}">Image</button>
+
+                                            </td>
+
+                                            
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

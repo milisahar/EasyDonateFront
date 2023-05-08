@@ -20,6 +20,11 @@ import { AddFundRaiserComponent } from './add-fund-raiser/add-fund-raiser.compon
 import { AddFundraiserComponent } from './add-fundraiser/add-fundraiser.component';
 import { AddDonationComponent } from './add-donation/add-donation.component';
 import { AddFundDonationComponent } from './add-fund-donation/add-fund-donation.component';
+import { EventComponent } from './event/event.component';
+import { UpdateEventComponent } from './update-event/update-event.component';
+import { CreateEventComponent } from './create-event/create-event.component';
+import { DetailsEventComponent } from './details-event/details-event.component';
+import {MatDatepickerModule} from "@angular/material/datepicker";
 
 @NgModule({
     imports: [
@@ -33,9 +38,8 @@ import { AddFundDonationComponent } from './add-fund-donation/add-fund-donation.
         MatToolbarModule,
         MatIconModule,
         FormsModule
-
     ],
-  declarations: [
+    declarations: [
     FooterComponent,
     NavbarComponent,
     SidebarComponent,
@@ -43,6 +47,11 @@ import { AddFundDonationComponent } from './add-fund-donation/add-fund-donation.
     FundraiserListComponent,
     UpdateFundraiserComponent,
     HomeComponent,
+    ConfirmationComponent,
+    EventComponent,
+    UpdateEventComponent,
+    CreateEventComponent,
+    DetailsEventComponent,
     ConfirmationComponent,
     AddFundRaiserComponent,
     AddFundraiserComponent,
