@@ -26,7 +26,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     MatFormFieldModule,
     MatInputModule,
     MatToolbarModule,
-    FontAwesomeModule
+    FontAwesomeModule,
     MatToolbarModule,
     MatDatepickerModule
 
