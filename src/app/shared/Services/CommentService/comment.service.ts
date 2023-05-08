@@ -10,7 +10,7 @@ import { Article } from 'app/shared/Models/article.model';
   providedIn: 'root'
 })
 export class CommentService  {
-  private baseUrl = 'http://localhost:8090/EasyDonate';
+  private baseUrl = 'http://localhost:8081/EasyDonate';
   comment : Comment;
   comments: Comment[];
   constructor(private http: HttpClient) { 

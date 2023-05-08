@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 
 export class CategoryService {
 
-  private baseUrl = 'http://localhost:8090/EasyDonate/Category';  
+  private baseUrl = 'http://localhost:8081/EasyDonate/Category';  
   constructor(private http: HttpClient) { }
 
 

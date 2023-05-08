@@ -27,6 +27,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     FormsModule,
     ReactiveFormsModule,
     MatButtonModule,
+    FormsModule,
     MatRippleModule,
     MatFormFieldModule,
     MatInputModule,
@@ -34,6 +35,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatTooltipModule,
     MatDatepickerModule,
     MatNativeDateModule
+    
   ],
   declarations: [
     DashboardComponent,
