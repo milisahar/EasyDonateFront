@@ -12,7 +12,20 @@ import { HomeComponent } from './home/home.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
-import { ReactiveFormsModule } from '@angular/forms';
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { ConfirmationComponent } from './confirmation/confirmation.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import { AddFundRaiserComponent } from './add-fund-raiser/add-fund-raiser.component';
+import { AddFundraiserComponent } from './add-fundraiser/add-fundraiser.component';
+import { AddDonationComponent } from './add-donation/add-donation.component';
+import { AddFundDonationComponent } from './add-fund-donation/add-fund-donation.component';
+=======
+>>>>>>> master
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
@@ -28,6 +41,44 @@ import { CommentsbackendComponent } from './commentsbackend/commentsbackend/comm
 import { SuccessComponent } from './custom-notifs/success/success/success.component';
 import { EditarticleallComponent } from './editarticleall-backoffice/editarticleall/editarticleall.component';
 import { UploadImageComponent } from './upload-image/upload-image/upload-image.component';
+<<<<<<< HEAD
+import { AddFundRaiserComponent } from './add-fund-raiser/add-fund-raiser.component';
+import { AddFundraiserComponent } from './add-fundraiser/add-fundraiser.component';
+import { DetailsEventComponent } from './details-event/details-event.component';
+import { UpdateEventComponent } from './update-event/update-event.component';
+import { EventComponent } from './event/event.component';
+import { CreateEventComponent } from './create-event/create-event.component';
+import { AddDonationComponent } from './add-donation/add-donation.component';
+import { AddFundDonationComponent } from './add-fund-donation/add-fund-donation.component';
+=======
+>>>>>>> Stashed changes
+import { EventComponent } from './event/event.component';
+import { UpdateEventComponent } from './update-event/update-event.component';
+import { CreateEventComponent } from './create-event/create-event.component';
+import { DetailsEventComponent } from './details-event/details-event.component';
+<<<<<<< Updated upstream
+import {MatDatepickerModule} from "@angular/material/datepicker";
+
+@NgModule({
+    imports: [
+        CommonModule,
+        RouterModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatSelectModule,
+        ReactiveFormsModule,
+        MatDialogModule,
+        MatToolbarModule,
+        MatIconModule,
+        FormsModule
+    ],
+    declarations: [
+=======
+import { AddFundRaiserComponent } from './add-fund-raiser/add-fund-raiser.component';
+import { AddFundraiserComponent } from './add-fundraiser/add-fundraiser.component';
+import { AddFundDonationComponent } from './add-fund-donation/add-fund-donation.component';
+import { AddDonationComponent } from './add-donation/add-donation.component';
+>>>>>>> master
 
 @NgModule({
   imports: [
@@ -39,10 +90,19 @@ import { UploadImageComponent } from './upload-image/upload-image/upload-image.c
     ReactiveFormsModule,
     MatDialogModule,
     MatToolbarModule,
+<<<<<<< HEAD
+    MatIconModule,
+    FormsModule
+
+=======
+    FormsModule
+,
     MatIconModule
+>>>>>>> master
 
   ],
   declarations: [
+>>>>>>> Stashed changes
     FooterComponent,
     NavbarComponent,
     SidebarComponent,
@@ -51,6 +111,8 @@ import { UploadImageComponent } from './upload-image/upload-image/upload-image.c
     UpdateFundraiserComponent,
     HomeComponent,
     ConfirmationComponent,
+<<<<<<< Updated upstream
+=======
     AllarticlesComponent,
     ArticleComponent,
     CommentComponent,
@@ -61,8 +123,30 @@ import { UploadImageComponent } from './upload-image/upload-image/upload-image.c
     ArticleCategoryComponent,
     CommentsbackendComponent,
     SuccessComponent,
+<<<<<<< HEAD
     EditarticleallComponent,
-    UploadImageComponent
+    UploadImageComponent,
+    ConfirmationComponent,
+=======
+  EditarticleallComponent,
+    UploadImageComponent,
+       ConfirmationComponent,
+>>>>>>> Stashed changes
+>>>>>>> master
+    EventComponent,
+    UpdateEventComponent,
+    CreateEventComponent,
+    DetailsEventComponent,
+    ConfirmationComponent,
+    AddFundRaiserComponent,
+    AddFundraiserComponent,
+    AddDonationComponent,
+    AddFundDonationComponent
+<<<<<<< HEAD
+    
+    
+=======
+>>>>>>> master
   ],
   exports: [
     FooterComponent,

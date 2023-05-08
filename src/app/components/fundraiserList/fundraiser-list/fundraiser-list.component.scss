@@ -1,0 +1,170 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,900);
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+header {
+	display: flex;
+	justify-content: center;
+	flex-flow: row wrap;
+  align-content: flex-end;
+  align-items: flex-end;
+	margin:0 auto;
+	height: 100px;
+
+}
+head.buttons{
+	display: flexbox;
+	justify-content: space-around;
+	margin-right: 10%;
+	
+}
+
+h3 {
+	font-weight: 300;
+	font-size: 2.6rem;
+	line-height: 120%;
+	letter-spacing: 1px;
+	text-align: center;
+	-webkit-margin-before: 2rem;
+  -webkit-margin-after: .5rem;
+	/*text-shadow: 0 2px 5px rgba(0, 0, 0, 0.30), 0 2px 15px rgba(0, 0, 0, 0.16);*/
+}
+
+
+h4 {
+	font-weight: 300;
+	font-size: 1.8rem;
+	line-height: 116%;
+	letter-spacing: 1px;
+	padding-bottom: 0%;
+	-webkit-margin-before: 2.6rem;
+  -webkit-margin-after: 1.625rem;
+	align-self: flex-start;
+	/*text-shadow: 0 2px 5px rgba(0, 0, 0, 0.30), 0 2px 15px rgba(0, 0, 0, 0.16);*/
+}
+
+
+article {
+	text-align:center;
+	align-item: stretch;
+	margin: 4% auto 8%;
+	font-size: .9rem;
+	font-weight: 300;
+	letter-spacing: .035rem;
+	line-height: 1.45435rem;
+}
+
+video {
+	border: 1px solid #ddd;
+	width:100%;
+	height: auto;
+	margin:0 auto;
+	padding:0;
+}
+
+
+
+
+
+.container--parent {
+	display: flex;
+	flex-direction: column;
+	justify-content: center; 
+	/*justify-content deals with the X-axis*/
+	/* values:
+	flex-start = align left or at the beginning, 
+	flex-end = align right or at the end, 
+	space-between = justifies content across width of container,
+	space-around =
+	center = centers of course */ 
+	align-items: stretch;
+	/*align-items deals wiht the Y-axis*/
+	/* values:
+	flex-start,
+	flex-end,
+	center,
+	stretch = will stretch to the max height of the container,
+	baseline = all items will line up on the lowest baseline */
+	align-content: stretch; /*applies to content when it wraps */
+	/*value:
+	stretch = default; when no height is defined for child containers */
+}
+
+/* We tell all items to be 100% width */
+.container--parent > * {
+	flex: 1 100%;
+}
+
+/* container--child has direct child properties of flexbox when container--parent is given parent properties */
+
+
+
+/* container--steps has to then reset with parent properties  */
+.container--steps {
+	margin: 6% auto;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+  align-content: stretch;
+	align-items: stretch;
+	text-align: center;
+	/*background: rgba(6, 140, 203, 0.4)*/
+}
+
+.container--steps:last-of-type {
+	flex-direction: row;	
+}
+
+.athletic {background-color:#F05624}
+.holiday {background-color: #0C835D}
+.out-of-box {background-color: transparent}
+
+.container--text {
+	width: 26%;
+	margin: 2% auto;	
+	vertical-align: top;
+	/*background-color: rgba(0,0,0,0.3);*/
+	padding: 0% 3% 5%;
+	color: #fff; 	
+	border: 1px solid rgba(0, 0, 0, .2);
+}
+
+article p {
+	max-width:80%;
+	margin:0 auto;
+}
+
+@media screen and (max-width: 60rem) {
+	.container--text {
+		width: 60%;
+	}
+}
+
+
+@media screen and (max-width: 52rem) {
+	.container--text {
+		width: 75%;
+	}
+}
+
+.title{
+    color: #0C835D;
+}
+.buttons{
+    display: flex;
+    margin-right: 10%;
+    margin-left: 10px;
+	margin-top: 20px;
+}
+.buttons button{
+
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: transparent;
+    width: 120px;
+    height: 40px;
+    
+
+}
+

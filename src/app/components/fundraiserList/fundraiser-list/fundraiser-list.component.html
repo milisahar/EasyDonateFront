@@ -1,53 +1,56 @@
 
-    <div class="main-content">
-        <div class="container-fluid">
-            <div class="row">
-            
-                <div class="col-md-12">
-                    <div class="card card-plain">
-                        <div class="card-header card-header-primary">
-                            <h4 class="card-title mt-0"> fundraiser List</h4>
-                            <p class="card-category"> Here is a list of all the fundraisers</p>
+
+                        <div  class="card-header card-header-primary" style="background-color:transparent;padding: 20px;display: flex ;">
+                            <h4 class="card-title mt-0" style="padding-top: 18px;"> fundraiser List</h4>
+                        
+                                <button (click)="add()" style="margin-left: 75%;height: 50px;" class="btn btn-success">add</button>
+                                <button (click)="addF()"  class="btn btn-success">add</button>
+                                <div>
+                                    
+                                </div>
+                            
                         </div>
                         <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-hover">
-                                    <thead class="">
-                                        <tr class="table-danger" class="text-success">
-                                            <th>Title</th>
-                                            <th>Goal</th>
-                                            <th>Deadline</th>
-                                            <th>Progress Status</th>
-                                            <th>target</th>
-                                            <th>Actions</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody >
-                                        <tr *ngFor=" let fundraiser of fundraisers">
-                                            <td>{{fundraiser.title}}</td>
-                                            <td>{{fundraiser.goal}}</td>
-                                            <td>{{fundraiser.deadline}}</td>
-                                             <td>{{fundraiser.progressStatus}}</td>
-                                             <td>{{fundraiser.target}}</td>
-                                             <td class="td-actions ">
-                                                <button mat-raised-button type="button" matTooltip="Edit Task" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon" (click)="updateFundraiser(fundraiser.fundraiser_id)">
-                                                    <i class="material-icons">edit</i>
-                                                </button>
-                                                <button mat-raised-button type="button" matTooltip="Remove" [matTooltipPosition]="'above'" class="btn btn-danger btn-link btn-sm btn-just-icon" (click)="deleteFundraiser(fundraiser.fundraiser_id)">
-                                                    <i class="material-icons">delete</i>
-                                                </button>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                            <div class="container--parent">
+                                <div class="container--child">
+                                        <div class="container--steps">
+                            
+                                                <section *ngFor="let item of fundraisers" class="container--text out-of-box">
+                                                    <div class="head">
+                                                    <div class="buttons">
+                                                    <button mat-icon-button style="border: transparent;" >
+                                                        <i class="material-icons" style="color: red;"(click)="updateFundraiser(item.fundraiser_id)">edit</i>
+                                                    </button>
+                                                        <button mat-icon-button style="border: transparent;">
+                                                            <i class="material-icons" style="color: red;"(click)="deleteFundraiser(item.fundraiser_id)">delete_outline</i>
+                                                          </button>
+                                                        </div>
+                                                        <header>
+                                                                <h4 class="title">{{item.title}}</h4>
+                                                        </header>
+                                                        </div>
+                                                        <article style="text-align: left; ">
+                                                                <p class="title">{{item.goal}}</p>
+                                                                <p class="title">{{item.description}}</p>
+                                                                <div ><h5 class="title" style="text-align: left;margin-left: 15px;color: red;">deadline :{{item.deadline | date:"MM/dd/yy"}}</h5></div>
+                                                            </article>
+                                                        <div >
+                                                            <button mat-icon-button style="border: transparent;">
+                                                                <i class="material-icons" style="color: red;">favorite_border</i>
+                                                            </button>
+                                                             
+                                                        </div>
+
+                                                </section>
+                                        </div>
+                                </div>
                             </div>
+
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </div>
+
      
     
+
+
               
         

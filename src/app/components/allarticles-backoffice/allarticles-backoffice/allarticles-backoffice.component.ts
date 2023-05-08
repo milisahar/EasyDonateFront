@@ -5,6 +5,7 @@ import { Donation } from 'app/shared/Models/donation';
 import { ArticleService } from 'app/shared/Services/ArticleService/article.service';
 import { DonationService } from 'app/shared/Services/DonsationService/donation.service';
 import * as Chartist from 'chartist';
+import { forkJoin } from 'rxjs';
 
 declare const $: any;
 declare interface RouteInfo {
@@ -34,48 +35,54 @@ export class AllarticlesBackofficeComponent implements OnInit {
 
   
   articles: Article[] = [];
-  constructor( private articleService: ArticleService, private router: Router) { }
+
+  constructor(private articleService: ArticleService, private router: Router) { }
 
   ngOnInit(): void {
-
+    console.log("Inside ngOnInit");
     this.getArticles();
-    this.articleService.getArticlesList().subscribe( data => {
-      this.articles = data;
-      this.articles.forEach(article => {
-        this.articleService.getCategoryName(article.id).subscribe(categoryName => {
-          article.categoryName = categoryName;
-        });
-      });
-    });
   }
-  goToComments(id: number) {
-    console.log("Article ID:", id);
-    this.router.navigate(['/commentsbyarticle', id]);
-}
 
   private getArticles() {
-    this.articleService.getArticlesList().subscribe( data => {
+    this.articleService.getArticlesList().subscribe(data => {
+      console.log("Received articles data:", data);
       this.articles = data;
-    })
-    
+      this.loadCategoryNames();
+    });
+  }
+
+  private loadCategoryNames(): void {
+    const categoryRequests = this.articles.map(article => {
+      return this.articleService.getCategoryName(article.id);
+    });
+
+    forkJoin(categoryRequests).subscribe(categoryNames => {
+      console.log("Received category names:", categoryNames);
+      categoryNames.forEach((categoryName, index) => {
+        this.articles[index].categoryName = categoryName as string; // Explicitly cast the response as string
+      });
+    });
   }
 
   deleteArticle(id: number) {
     if (confirm('Are you sure you want to delete this article?')) {
       this.articleService.deleteArticle(id).subscribe(() => {
-        this.articles = this.articles.filter((a) => a.id !== id);
+        this.articles = this.articles.filter(a => a.id !== id);
       });
     }
   }
-  
+
   addTags(id: number): void {
     this.router.navigate(['/addtags', id]);
   }
-  
+
   editArticle(id: number): void {
     this.router.navigate(['/editarticleall', id]);
   }
- 
-  
+
+  goToComments(id: number) {
+    console.log("Article ID:", id);
+    this.router.navigate(['/commentsbyarticle', id]);
   }
 
+}

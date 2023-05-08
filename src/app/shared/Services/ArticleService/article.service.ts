@@ -11,11 +11,11 @@ import { Article } from 'app/shared/Models/article.model';
 export class ArticleService {
 
   constructor(private http: HttpClient) { }
- private baseUrl = 'http://localhost:8090/EasyDonate/ControllerArticle';
-  private generatePdfUrl = 'http://localhost:8090/ControllerArticle/generate-pdf/';
+ private baseUrl = 'http://localhost:8081/EasyDonate/ControllerArticle';
+  private generatePdfUrl = 'http://localhost:8081/ControllerArticle/generate-pdf/';
 
  generatePDF(id: number) {
-  return this.http.get(`http://localhost:8090/EasyDonate/ControllerArticle/generate-pdf/${id}`, {
+  return this.http.get(`http://localhost:8081/EasyDonate/ControllerArticle/generate-pdf/${id}`, {
     responseType: 'arraybuffer',
     observe: 'response'
   }).pipe(
