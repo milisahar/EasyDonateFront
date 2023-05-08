@@ -18,10 +18,7 @@
             "polyfills": "src/polyfills.ts",
             "assets": [
               "src/assets",
-              "src/favicon.ico",
-         
-              "src/assets/img"
-
+              "src/favicon.ico"
             ],
             "styles": [
               "node_modules/perfect-scrollbar/css/perfect-scrollbar.css",
@@ -44,9 +41,7 @@
               "chartist"
             ]
           },
-          
           "configurations": {
-          
             "production": {
               "optimization": {
                 "scripts": true,
@@ -85,7 +80,6 @@
               },
               "outputHashing": "all"
             }
-           
           }
         },
         "serve": {
@@ -134,9 +128,6 @@
             "assets": [
               "src/assets",
               "src/favicon.ico"
-          ,
-            "src/assets/img"
-
             ]
           }
         },
@@ -189,5 +180,4 @@
   "cli": {
     "analytics": false
   }
-  
 }
