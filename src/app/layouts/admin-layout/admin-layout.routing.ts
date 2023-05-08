@@ -12,14 +12,13 @@ import { DonationListComponent } from 'app/components/donation-list/donation-lis
 import { FundraiserListComponent } from 'app/components/fundraiserList/fundraiser-list/fundraiser-list.component';
 import { UpdateFundraiserComponent } from 'app/components/updateFundraiser/update-fundraiser/update-fundraiser.component';
 import { HomeComponent } from 'app/components/home/home.component';
-<<<<<<< Updated upstream
 import { AddFundRaiserComponent } from 'app/components/add-fund-raiser/add-fund-raiser.component';
 import { AddFundraiserComponent } from 'app/components/add-fundraiser/add-fundraiser.component';
 import {EventComponent} from "../../components/event/event.component";
 import {CreateEventComponent} from "../../components/create-event/create-event.component";
 import {UpdateEventComponent} from "../../components/update-event/update-event.component";
 import {DetailsEventComponent} from "../../components/details-event/details-event.component";
-=======
+
 import { AllarticlesBackofficeComponent } from 'app/components/allarticles-backoffice/allarticles-backoffice/allarticles-backoffice.component';
 import { AddarticleComponent } from 'app/components/addarticle-backoffice/addarticle/addarticle.component';
 import { EditarticleBackofficeComponent } from 'app/components/editarticle-backoffice/editarticle-backoffice/editarticle-backoffice.component';
@@ -30,10 +29,13 @@ import { UploadImageComponent } from 'app/components/upload-image/upload-image/u
 import { AddFundRaiserComponent } from 'app/components/add-fund-raiser/add-fund-raiser.component';
 import { AddFundraiserComponent } from 'app/components/add-fundraiser/add-fundraiser.component';
 import { CreateEventComponent } from 'app/components/create-event/create-event.component';
+
+import { UpdateEventComponent } from 'app/components/update-event/update-event.component';
+import { DetailsEventComponent } from 'app/components/details-event/details-event.component';
+import { EventComponent } from 'app/components/event/event.component';
 import { DetailsEventComponent } from 'app/components/details-event/details-event.component';
 import { UpdateEventComponent } from 'app/components/update-event/update-event.component';
 import { EventComponent } from 'app/components/event/event.component';
->>>>>>> Stashed changes
 
 export const AdminLayoutRoutes: Routes = [
     // {
@@ -91,15 +93,14 @@ export const AdminLayoutRoutes: Routes = [
     {path:'update-fundraiser/:id',component:UpdateFundraiserComponent},
     { path: 'notifications',  component: NotificationsComponent },
     { path: 'upgrade',        component: UpgradeComponent },
-<<<<<<< Updated upstream
-=======
+
 
     { path:'donation',  component: DonationListComponent },
     { path:'fundraiser',  component: FundraiserListComponent },
     {path:'update-fundraiser/:id',component:UpdateFundraiserComponent},
     { path: 'notifications',  component: NotificationsComponent },
     { path: 'upgrade',        component: UpgradeComponent },
->>>>>>> Stashed changes
+
     { path: 'addFundRaiser',        component: AddFundRaiserComponent },
     { path: 'addFundraiser2',        component: AddFundraiserComponent },
 
@@ -107,8 +108,5 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'update-Event/:id',        component: UpdateEventComponent },
     { path: 'details-Event/:id',        component: DetailsEventComponent },
     { path: 'event',        component: EventComponent },
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
 ];

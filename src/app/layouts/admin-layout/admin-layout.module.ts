@@ -27,12 +27,18 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     FormsModule,
     ReactiveFormsModule,
     MatButtonModule,
+    FormsModule,
     MatRippleModule,
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
     MatTooltipModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+
+    MatDatepickerModule,
+    MatNativeDateModule,
+    
+
   ],
   declarations: [
     DashboardComponent,
