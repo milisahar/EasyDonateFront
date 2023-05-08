@@ -12,24 +12,29 @@ import { HomeComponent } from './home/home.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
-import { ReactiveFormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
+import { AddFundRaiserComponent } from './add-fund-raiser/add-fund-raiser.component';
+import { AddFundraiserComponent } from './add-fundraiser/add-fundraiser.component';
+import { AddDonationComponent } from './add-donation/add-donation.component';
+import { AddFundDonationComponent } from './add-fund-donation/add-fund-donation.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    RouterModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatSelectModule,
-    ReactiveFormsModule,
-    MatDialogModule,
-    MatToolbarModule,
-    MatIconModule
+    imports: [
+        CommonModule,
+        RouterModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatSelectModule,
+        ReactiveFormsModule,
+        MatDialogModule,
+        MatToolbarModule,
+        MatIconModule,
+        FormsModule
 
-  ],
+    ],
   declarations: [
     FooterComponent,
     NavbarComponent,
@@ -38,7 +43,11 @@ import {MatIconModule} from '@angular/material/icon';
     FundraiserListComponent,
     UpdateFundraiserComponent,
     HomeComponent,
-    ConfirmationComponent
+    ConfirmationComponent,
+    AddFundRaiserComponent,
+    AddFundraiserComponent,
+    AddDonationComponent,
+    AddFundDonationComponent
   ],
   exports: [
     FooterComponent,
