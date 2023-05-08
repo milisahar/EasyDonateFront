@@ -12,7 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
@@ -28,6 +28,14 @@ import { CommentsbackendComponent } from './commentsbackend/commentsbackend/comm
 import { SuccessComponent } from './custom-notifs/success/success/success.component';
 import { EditarticleallComponent } from './editarticleall-backoffice/editarticleall/editarticleall.component';
 import { UploadImageComponent } from './upload-image/upload-image/upload-image.component';
+import { AddFundRaiserComponent } from './add-fund-raiser/add-fund-raiser.component';
+import { AddFundraiserComponent } from './add-fundraiser/add-fundraiser.component';
+import { DetailsEventComponent } from './details-event/details-event.component';
+import { UpdateEventComponent } from './update-event/update-event.component';
+import { EventComponent } from './event/event.component';
+import { CreateEventComponent } from './create-event/create-event.component';
+import { AddDonationComponent } from './add-donation/add-donation.component';
+import { AddFundDonationComponent } from './add-fund-donation/add-fund-donation.component';
 
 @NgModule({
   imports: [
@@ -39,7 +47,9 @@ import { UploadImageComponent } from './upload-image/upload-image/upload-image.c
     ReactiveFormsModule,
     MatDialogModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule
+
 
   ],
   declarations: [
@@ -62,7 +72,19 @@ import { UploadImageComponent } from './upload-image/upload-image/upload-image.c
     CommentsbackendComponent,
     SuccessComponent,
     EditarticleallComponent,
-    UploadImageComponent
+    UploadImageComponent,
+    ConfirmationComponent,
+    EventComponent,
+    UpdateEventComponent,
+    CreateEventComponent,
+    DetailsEventComponent,
+    ConfirmationComponent,
+    AddFundRaiserComponent,
+    AddFundraiserComponent,
+    AddDonationComponent,
+    AddFundDonationComponent
+    
+    
   ],
   exports: [
     FooterComponent,
