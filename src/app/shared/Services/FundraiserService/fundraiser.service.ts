@@ -12,8 +12,8 @@ export class FundraiserService {
   getListFundraisers() : Observable<Fundraiser[]>{
     return this.httpClient.get<Fundraiser[]>(`${this.baseURL}/listFundraisers`);
   }
-  addFundraiser(fundraiser: Fundraiser) : Observable<any>{
-    return this.httpClient.post(`${this.baseURL}/addFundraiser`,fundraiser)
+  addFundraiser(fundraiser: any) : Observable<any>{
+    return this.httpClient.post<any>(`${this.baseURL}/addFundraiser`,fundraiser)
   }
   getFundraiserById(id: number) : Observable<Fundraiser>{
     return this.httpClient.get<Fundraiser>(`${this.baseURL}/findFundraiserById/${id}`);

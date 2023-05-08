@@ -16,6 +16,10 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
+import { AddFundRaiserComponent } from './add-fund-raiser/add-fund-raiser.component';
+import { AddFundraiserComponent } from './add-fundraiser/add-fundraiser.component';
+import { AddDonationComponent } from './add-donation/add-donation.component';
+import { AddFundDonationComponent } from './add-fund-donation/add-fund-donation.component';
 import { EventComponent } from './event/event.component';
 import { UpdateEventComponent } from './update-event/update-event.component';
 import { CreateEventComponent } from './create-event/create-event.component';
@@ -33,11 +37,9 @@ import {MatDatepickerModule} from "@angular/material/datepicker";
         MatDialogModule,
         MatToolbarModule,
         MatIconModule,
-        MatDatepickerModule,
         FormsModule
-
     ],
-  declarations: [
+    declarations: [
     FooterComponent,
     NavbarComponent,
     SidebarComponent,
@@ -49,7 +51,12 @@ import {MatDatepickerModule} from "@angular/material/datepicker";
     EventComponent,
     UpdateEventComponent,
     CreateEventComponent,
-    DetailsEventComponent
+    DetailsEventComponent,
+    ConfirmationComponent,
+    AddFundRaiserComponent,
+    AddFundraiserComponent,
+    AddDonationComponent,
+    AddFundDonationComponent
   ],
   exports: [
     FooterComponent,
