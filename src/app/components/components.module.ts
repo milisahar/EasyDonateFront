@@ -12,7 +12,10 @@ import { HomeComponent } from './home/home.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/Farah-Front
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -37,6 +40,7 @@ import { EventComponent } from './event/event.component';
 import { CreateEventComponent } from './create-event/create-event.component';
 import { AddDonationComponent } from './add-donation/add-donation.component';
 import { AddFundDonationComponent } from './add-fund-donation/add-fund-donation.component';
+<<<<<<< HEAD
 
 import { AddFundRaiserComponent } from './add-fund-raiser/add-fund-raiser.component';
 import { AddFundraiserComponent } from './add-fundraiser/add-fundraiser.component';
@@ -72,6 +76,8 @@ import { AddFundraiserComponent } from './add-fundraiser/add-fundraiser.componen
 import { AddFundDonationComponent } from './add-fund-donation/add-fund-donation.component';
 import { AddDonationComponent } from './add-donation/add-donation.component';
 
+=======
+>>>>>>> origin/Farah-Front
 
 @NgModule({
   imports: [
@@ -83,11 +89,16 @@ import { AddDonationComponent } from './add-donation/add-donation.component';
     ReactiveFormsModule,
     MatDialogModule,
     MatToolbarModule,
+<<<<<<< HEAD
 
 
     MatIconModule,
     FormsModule,
 
+=======
+    MatIconModule,
+    FormsModule
+>>>>>>> origin/Farah-Front
 
 
   ],
@@ -115,7 +126,10 @@ import { AddDonationComponent } from './add-donation/add-donation.component';
     EditarticleallComponent,
     UploadImageComponent,
     ConfirmationComponent,
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/Farah-Front
     EventComponent,
     UpdateEventComponent,
     CreateEventComponent,
@@ -124,11 +138,17 @@ import { AddDonationComponent } from './add-donation/add-donation.component';
     AddFundRaiserComponent,
     AddFundraiserComponent,
     AddDonationComponent,
+<<<<<<< HEAD
 
     AddFundDonationComponent,
 
 
 
+=======
+    AddFundDonationComponent
+    
+    
+>>>>>>> origin/Farah-Front
   ],
   exports: [
     FooterComponent,

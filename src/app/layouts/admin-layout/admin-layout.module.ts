@@ -36,10 +36,15 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     FontAwesomeModule,
 
     MatDatepickerModule,
+<<<<<<< HEAD
 
     MatNativeDateModule,
     
 
+=======
+    MatNativeDateModule
+    
+>>>>>>> origin/Farah-Front
   ],
   declarations: [
     DashboardComponent,

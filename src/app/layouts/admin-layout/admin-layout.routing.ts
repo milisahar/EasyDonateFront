@@ -29,7 +29,13 @@ import { UploadImageComponent } from 'app/components/upload-image/upload-image/u
 import { AddFundRaiserComponent } from 'app/components/add-fund-raiser/add-fund-raiser.component';
 import { AddFundraiserComponent } from 'app/components/add-fundraiser/add-fundraiser.component';
 import { CreateEventComponent } from 'app/components/create-event/create-event.component';
+<<<<<<< HEAD
 
+=======
+import { UpdateEventComponent } from 'app/components/update-event/update-event.component';
+import { DetailsEventComponent } from 'app/components/details-event/details-event.component';
+import { EventComponent } from 'app/components/event/event.component';
+>>>>>>> origin/Farah-Front
 
 export const AdminLayoutRoutes: Routes = [
     // {
@@ -117,4 +123,23 @@ export const AdminLayoutRoutes: Routes = [
    {path:'allarticlesbackoffice',component:AllarticlesBackofficeComponent},
     {path:'addarticle',component:AddarticleComponent},
 
+<<<<<<< HEAD
+=======
+    {path:'update-fundraiser/:id',component:UpdateFundraiserComponent},
+    { path: 'notifications',  component: NotificationsComponent },
+    { path: 'upgrade',        component: UpgradeComponent },
+
+    { path:'donation',  component: DonationListComponent },
+    { path:'fundraiser',  component: FundraiserListComponent },
+    {path:'update-fundraiser/:id',component:UpdateFundraiserComponent},
+    { path: 'notifications',  component: NotificationsComponent },
+    { path: 'upgrade',        component: UpgradeComponent },
+    { path: 'addFundRaiser',        component: AddFundRaiserComponent },
+    { path: 'addFundraiser2',        component: AddFundraiserComponent },
+
+    { path: 'CreateEvent',        component: CreateEventComponent },
+    { path: 'update-Event/:id',        component: UpdateEventComponent },
+    { path: 'details-Event/:id',        component: DetailsEventComponent },
+    { path: 'event',        component: EventComponent },
+>>>>>>> origin/Farah-Front
 ];
