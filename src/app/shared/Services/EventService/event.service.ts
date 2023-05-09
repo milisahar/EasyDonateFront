@@ -14,6 +14,12 @@ export class EventService {
   getListEvent() {
     return this.httpClient.get<Event[]>(`${this.baseURL}/event/listEvent`);
   }
+  getListEventByTypeNbre(){
+    return this.httpClient.get(`${this.baseURL}/events/types/`);
+  }
+  getListEventByTypeNbreNotList(type:any){
+    return this.httpClient.get(`${this.baseURL}/event/`+ type);
+  }
   getEvent(id:any) {
     return this.httpClient.get<Event>(`${this.baseURL}/event/get/`+id);
   }

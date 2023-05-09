@@ -16,6 +16,8 @@ import {EventComponent} from "../../components/event/event.component";
 import {CreateEventComponent} from "../../components/create-event/create-event.component";
 import {UpdateEventComponent} from "../../components/update-event/update-event.component";
 import {DetailsEventComponent} from "../../components/details-event/details-event.component";
+import {TaskListComponent} from "../../components/task-list/task-list.component";
+import { HelpDemandListComponent } from 'app/components/help-demand-list/help-demand-list.component';
 
 export const AdminLayoutRoutes: Routes = [
     // {
@@ -64,7 +66,7 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
     { path: 'home',      component: HomeComponent },
     { path: 'user-profile',   component: UserProfileComponent },
-    { path: 'table-list',     component: TableListComponent },
+    
     { path: 'typography',     component: TypographyComponent },
     { path: 'icons',          component: IconsComponent },
     { path: 'maps',           component: MapsComponent },
@@ -77,4 +79,6 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'update-Event/:id',        component: UpdateEventComponent },
     { path: 'details-Event/:id',        component: DetailsEventComponent },
     { path: 'event',        component: EventComponent },
+    { path: 'tasks',        component: TaskListComponent },
+    { path: 'helpDemands',        component: HelpDemandListComponent },
 ];

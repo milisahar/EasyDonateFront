@@ -1,0 +1,116 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title">{{task.title}}' Details</h4>
+                        <p class="card-category">You can update the task by modyfing any information below</p>
+                    </div>
+                    <div class="card-body">
+
+                        <div class="box">
+                            <div class="box-header">
+
+                            </div>
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-6 col-xs-12">
+                                        <label>Task title</label>
+                                        <input [(ngModel)]="task.title" name="titre" type="text" class="form-control">
+                                    </div>
+                                    <div class="col-md-4 col-sm-6 col-xs-12">
+                                        <label>Urgency</label>
+                                        <div>
+                                            <select class="form-control" [(ngModel)]="task.urgency">
+                                                <option>HIGHT</option>
+                                                <option>MEDIUM</option>
+                                                <option>LOW</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-4 col-sm-6 col-xs-12">
+                                        <label>Limit date</label>
+                                        <input [(ngModel)]="task.endingingDate" name="dateLimite" type="date"
+                                            class="form-control">
+                                    </div>
+                                    <div></div>
+                                    <div class=" col-sm-12">
+                                        <label>Tasks description</label>
+                                        <input [(ngModel)]="task.description" name="description" type="text"
+                                            class="form-control height-120 textarea">
+
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+
+                        <div class="clearfix">
+                            <!--Checkpoints list-->
+
+                            <div class="col-md-20">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4 class="card-title"> CheckPoints </h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <div *ngIf="checkNbre === 0; else show ">
+                                            <h2>There is no checkpoints uploaded ! </h2>
+                                        </div>
+                                        <ng-template #show>
+                                            <div class="card-wrap">
+                                                <div class="box" *ngFor="let ck of checkPointList">
+
+                                                    <div class="card" style="width:220px; height:120">
+                                                        <div class="image"><img class="img" src="./assets/img/ww.gif"
+                                                                width="80%" height="50%" /></div>
+                                                        <div class="title">{{ck.title}}</div>
+                                                        <div class="price">{{ck.description}}</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div></div>
+                                        </ng-template>
+                                        <div class="clearfix"></div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Checkpoints list-->
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-md-4">
+                <div class="card card-profile">
+                    <div class="card-avatar">
+                        <a href="javascript:void(0)">
+                            <img class="img" src="./assets/img/faces/marc.jpg" />
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-category text-gray">Assigned to informations </h6>
+                        <p><label>Full name : {{assignedTo.fullName}}</label></p>
+                        <p><label>Email : {{assignedTo.email}}</label></p>
+                        <p><label>Phone number : {{assignedTo.phoneNumber}}</label></p>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <button (click)="onupdateTask()" mat-raised-button type="submit" class="btn btn-outline-success">Update
+            task</button>
+        <button (click)="onClosepopup()" mat-raised-button type="submit" class="btn btn-outline-secondary">Cancel</button>
+
+    </div>
+
+</div>

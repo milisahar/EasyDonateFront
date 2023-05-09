@@ -1,0 +1,327 @@
+<div class="card">
+    <div class="card-header card-header-warning">
+        <h4 class="card-title">Tasks List</h4>
+        <p class="card-category">This list contains all the assigned tasks and their progress !<br>
+            You can always add a new task and assign it to the volenteer | stuff in question !
+        </p>
+    </div>
+    <!--Add button-->
+    <a class="float" (click)="openAddingTask()" style="cursor: pointer;" title="Add a new task?">
+        <i class="fa fa-plus my-float"></i>
+    </a>
+
+</div><div class="main-content">
+
+
+<!--
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-md-12">
+            <div class="card card-plain">
+                <div class="card-header card-header-danger">
+                    <h4 class="card-title mt-0"> Tasks List</h4>
+                    <p class="card-category"> Here is a subtitle for this table</p>
+                </div>
+                <div class="card-body">
+                    
+                    <div class="table-responsive" >
+                        <table class="table table-hover" >
+                            <thead class="">
+                                <th class="align-middle"> ID </th>
+                                <th class="align-middle"> Description </th>
+                                <th class="align-middle"> Starting Date </th>
+                                <th class="align-middle"> Endinging Date </th>
+                                <th class="align-middle"> Assigned to </th>
+                                <th></th>
+                            </thead>    
+                            <tbody>
+                                <tr *ngFor="let t of listTask">
+                                    <div class="col" *ngIf="t.progress === 'STILL'">
+                                    <td class="align-middle"> {{t.id}} </td>
+                                    <td class="align-middle"> {{t.description}} </td>
+                                    <td class="align-middle"> {{t.endingingDate}} </td>
+                                    <td class="align-middle"> {{t.startingDate}} </td>
+                                    <td class="align-middle"> name </td>
+                                    <td class="align-middle">
+                                        <button (click)="onDeletTask(t)" class="btn btn-sm btn-danger">
+                                         <i class="material-icons">delete</i>
+                                        </button>
+                                        
+                                        <button (click)="onDeletTask(t)" class="btn btn-sm btn-success">
+                                         <i class="material-icons">remove_red_eye</i>
+                                        </button>
+                                    </td>
+                                </div>
+                                   
+                            </tbody>
+                        </table>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+<div class="board">
+    <div class="card-list">
+        <div class="leftside">
+
+            <h2 class="claras"><i class="large material-icons">timer</i>To Do</h2>
+            <div *ngFor="let t of listTask">
+                <div class="col" *ngIf="t.progress === 'STILL'">
+                    <div class="card mb-3" *ngIf="t.urgency === 'HIGH'" style="background-color:#ff8a65">
+                        <div class="align-middle">
+                            <div class="center-text">
+                                {{t.title}}
+                                <div class="d-flex justify-content-end">
+
+                                    <i class="material-icons" (click)="onDeletTask(t)" style="color: red; cursor: pointer;" title="Delete the task?">delete</i>
+                                    <i class="material-icons" (click)="openDialog(t.id)" style="color: green; cursor: pointer;" title="Task's details">remove_red_eye</i>
+                                    <i class="material-icons" (click)="uploadCheckPoint(t.id)" style="color: #ffeb3b; cursor: pointer;" title="Update you progress">flag</i>
+                                    <i class="material-icons" (click)="askForHelp(t.id)" style="color:#e65100; cursor: pointer;" title="Demand for help">live_help</i>
+                                    <i class="material-icons" (click)="makrAsDone(t.id)" style="color: #1b5e20; cursor: pointer;" title="Mark it as done">done_all</i>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <div class="card  mb-3" *ngIf="t.urgency === 'MEDIUM'" style="background-color:#ffab40">
+                        <div class="card-content">
+
+                            <div class="align-middle">
+                                <div class="center-text">
+                                    {{t.title}}
+                                    <div class="d-flex justify-content-end">
+                              
+                                        <i class="material-icons" (click)="onDeletTask(t)" style="color: red; cursor: pointer;" title="Delete the task?">delete</i>
+                                        <i class="material-icons" (click)="openDialog(t.id)" style="color: green; cursor: pointer;" title="Task's details">remove_red_eye</i>
+                                        <i class="material-icons" (click)="uploadCheckPoint(t.id)" style="color: #ffeb3b; cursor: pointer;" title="Update you progress">flag</i>
+                                        <i class="material-icons" (click)="askForHelp(t.id)" style="color:#e65100; cursor: pointer;" title="Demand for help">live_help</i>
+                                        <i class="material-icons" (click)="makrAsDone(t.id)" style="color: #1b5e20; cursor: pointer;" title="Mark it as done">done_all</i>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        <div class="card mb-3" *ngIf="t.urgency === 'LOW'" style="background-color: #ffb74d  ;">
+                            <div class="center-text">
+                                <div class="align-middle">
+                                    <div class="card-title activator">
+                                        {{t.title}}
+                                    </div>
+                   
+                                    <i class="material-icons" (click)="onDeletTask(t)" style="color: red; cursor: pointer;" title="Delete the task?">delete</i>
+                                    <i class="material-icons" (click)="openDialog(t.id)" style="color: green; cursor: pointer;" title="Task's details">remove_red_eye</i>
+                                    <i class="material-icons" (click)="uploadCheckPoint(t.id)" style="color: #ffeb3b; cursor: pointer;" title="Update you progress">flag</i>
+                                    <i class="material-icons" (click)="askForHelp(t.id)" style="color:#e65100; cursor: pointer;" title="Demand for help">live_help</i>
+                                    <i class="material-icons" (click)="makrAsDone(t.id)" style="color: #1b5e20; cursor: pointer;" title="Mark it as done">done_all</i>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="card mb-3" *ngIf="t.urgency === 'LOW'" style="background-color: #ffb74d;">
+                        <div class="card-content">
+                            <div class="align-middle">
+                                <div class="center-text">
+                                    {{t.title}}
+                                    <div class="d-flex justify-content-end">
+                                      
+                                    <i class="material-icons" (click)="onDeletTask(t)" style="color: red; cursor: pointer;" title="Delete the task?">delete</i>
+                                    <i class="material-icons" (click)="openDialog(t.id)" style="color: green; cursor: pointer;" title="Task's details">remove_red_eye</i>
+                                    <i class="material-icons" (click)="uploadCheckPoint(t.id)" style="color: #ffeb3b; cursor: pointer;" title="Update you progress">flag</i>
+                                    <i class="material-icons" (click)="askForHelp(t.id)" style="color:#e65100; cursor: pointer;" title="Demand for help">live_help</i>
+                                    <i class="material-icons" (click)="makrAsDone(t.id)" style="color: #1b5e20; cursor: pointer;" title="Mark it as done">done_all</i>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="card-list">
+        <div class="middleside">
+
+
+            <h2 class="claras"><i class="large material-icons">av_timer</i> Doing</h2>
+
+            <div *ngFor="let t of listTask">
+
+
+                <div class="col" *ngIf="t.progress === 'INPROGRESS'">
+                    <div class="card mb-3" *ngIf="t.urgency === 'HIGH'" style="background-color:#ff8a65">
+                        <div class="align-middle">
+                            <div class="center-text">
+                                {{t.title}}
+                                <div class="d-flex justify-content-end">
+                          
+                                    <i class="material-icons" (click)="onDeletTask(t)" style="color: red; cursor: pointer;" title="Delete the task?">delete</i>
+                                    <i class="material-icons" (click)="openDialog(t.id)" style="color: green; cursor: pointer;" title="Task's details">remove_red_eye</i>
+                                    <i class="material-icons" (click)="uploadCheckPoint(t.id)" style="color: #ffeb3b; cursor: pointer;" title="Update you progress">flag</i>
+                                    <i class="material-icons" (click)="askForHelp(t.id)" style="color:#e65100; cursor: pointer;" title="Demand for help">live_help</i>
+                                    <i class="material-icons" (click)="makrAsDone(t.id)" style="color: #1b5e20; cursor: pointer;" title="Mark it as done">done_all</i>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <div class="card  mb-3" *ngIf="t.urgency === 'MEDIUM'" style="background-color:#ffab40">
+                        <div class="card-content">
+
+                            <div class="align-middle">
+                                <div class="center-text">
+                                    {{t.title}}
+                                    <div class="d-flex justify-content-end">
+                              
+                                        <i class="material-icons" (click)="onDeletTask(t)" style="color: red; cursor: pointer;" title="Delete the task?">delete</i>
+                                        <i class="material-icons" (click)="openDialog(t.id)" style="color: green; cursor: pointer;" title="Task's details">remove_red_eye</i>
+                                        <i class="material-icons" (click)="uploadCheckPoint(t.id)" style="color: #ffeb3b; cursor: pointer;" title="Update you progress">flag</i>
+                                        <i class="material-icons" (click)="askForHelp(t.id)" style="color:#e65100; cursor: pointer;" title="Demand for help">live_help</i>
+                                        <i class="material-icons" (click)="makrAsDone(t.id)" style="color: #1b5e20; cursor: pointer;" title="Mark it as done">done_all</i>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        <div class="card mb-3" *ngIf="t.urgency === 'LOW'" style="background-color: #ffb74d  ;">
+                            <div class="center-text">
+                                <div class="align-middle">
+                                    <div class="card-title activator">
+                                        {{t.title}}
+                                    </div>
+                                    
+                                    <i class="material-icons" (click)="onDeletTask(t)" style="color: red; cursor: pointer;" title="Delete the task?">delete</i>
+                                    <i class="material-icons" (click)="openDialog(t.id)" style="color: green; cursor: pointer;" title="Task's details">remove_red_eye</i>
+                                    <i class="material-icons" (click)="uploadCheckPoint(t.id)" style="color: #ffeb3b; cursor: pointer;" title="Update you progress">flag</i>
+                                    <i class="material-icons" (click)="askForHelp(t.id)" style="color:#e65100; cursor: pointer;" title="Demand for help">live_help</i>
+                                    <i class="material-icons" (click)="makrAsDone(t.id)" style="color: #1b5e20; cursor: pointer;" title="Mark it as done">done_all</i>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="card mb-3" *ngIf="t.urgency === 'LOW'" style="background-color: #ffb74d  ;">
+                        <div class="card-content">
+                            <div class="align-middle">
+                                <div class="center-text">
+                                    {{t.title}}
+                                    <div class="d-flex justify-content-end">
+                                        <i class="material-icons" (click)="onDeletTask(t)" style="color: red; cursor: pointer;" title="Delete the task?">delete</i>
+                                        <i class="material-icons" (click)="openDialog(t.id)" style="color: green; cursor: pointer;" title="Task's details">remove_red_eye</i>
+                                        <i class="material-icons" (click)="uploadCheckPoint(t.id)" style="color: #ffeb3b; cursor: pointer;" title="Update you progress">flag</i>
+                                        <i class="material-icons" (click)="askForHelp(t.id)" style="color:#e65100; cursor: pointer;" title="Demand for help">live_help</i>
+                                        <i class="material-icons" (click)="makrAsDone(t.id)" style="color: #1b5e20; cursor: pointer;" title="Mark it as done">done_all</i>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="card-list">
+        <div class="rightside">
+
+            <h2 class="claras"><i class="large material-icons">check_circle</i> Done</h2>
+
+            <div *ngFor="let t of listTask">
+
+
+                <div class="col" *ngIf="t.progress === 'DONE'">
+                    <div class="card mb-3" *ngIf="t.urgency === 'HIGH'" style="background-color:#ff8a65">
+                        <div class="align-middle">
+                            <div class="center-text">
+                                {{t.title}}
+                                <div class="d-flex justify-content-end">
+                                    
+                                    <i class="material-icons" (click)="onDeletTask(t)" style="color: red; cursor: pointer;" title="Delete the task?">delete</i>
+                                    <i class="material-icons" (click)="openDialog(t.id)" style="color: green; cursor: pointer;" title="Task's details">remove_red_eye</i>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <div class="card  mb-3" *ngIf="t.urgency === 'MEDIUM'" style="background-color:#ffab40">
+                        <div class="card-content">
+
+                            <div class="align-middle">
+                                <div class="center-text">
+                                    {{t.title}}
+                                    <div class="d-flex justify-content-end">
+                                        
+                                    <i class="material-icons" (click)="onDeletTask(t)" style="color: red; cursor: pointer;" title="Delete the task?">delete</i>
+                                    <i class="material-icons" (click)="openDialog(t.id)" style="color: green; cursor: pointer;" title="Task's details">remove_red_eye</i>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        <div class="card mb-3" *ngIf="t.urgency === 'LOW'" style="background-color: #ffb74d ;">
+                            <div class="center-text">
+                                <div class="align-middle">
+                                    <div class="card-title activator">
+                                        {{t.title}}
+                                    </div>
+                                    
+                                    <i class="material-icons" (click)="onDeletTask(t)" style="color: red; cursor: pointer;" title="Delete the task?">delete</i>
+                                    <i class="material-icons" (click)="openDialog(t.id)" style="color: green; cursor: pointer;" title="Task's details">remove_red_eye</i>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="card mb-3" *ngIf="t.urgency === 'LOW'" style="background-color: #ffb74d ;">
+                        <div class="card-content">
+                            <div class="align-middle">
+                                <div class="center-text">
+                                    {{t.title}}
+                                    <div class="d-flex justify-content-end">
+                                        
+                                    <i class="material-icons" (click)="onDeletTask(t)" style="color: red; cursor: pointer;" title="Delete the task?">delete</i>
+                                    <i class="material-icons" (click)="openDialog(t.id)" style="color: green; cursor: pointer;" title="Task's details">remove_red_eye</i>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>

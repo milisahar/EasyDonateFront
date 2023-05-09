@@ -1,0 +1,57 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="card">
+                <div class="card-header card-header-warning">
+                    <h4 class="card-title">Adding a new check point</h4>
+                    <p class="card-category">Update your work progress </p>
+                </div>
+                <div class="card-body">
+
+                    <div class="box">
+                        <div class="box-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label>Check point's title *</label>
+                                    <input required [(ngModel)]="checkPoint.title" name="titre" type="text"
+                                        class="form-control">
+
+                                </div>
+                                
+                              <p></p>
+                                <div class=" col-sm-12">
+                                    <label>Check point's description * </label>
+                                    <input [(ngModel)]="checkPoint.description" name="description" type="text"
+                                        class="form-control height-120 textarea">
+
+                                </div>
+                                
+                                <p></p>
+                                <div class="col-md-12">
+                                    <label>Image :</label>
+                                    <input [(ngModel)]="checkPoint.img" type="file" id="myFile" name="filename">
+
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                    <button (click)="addCheckPoint()" mat-raised-button type="submit" class="btn btn-outline-success"
+                        style="cursor: pointer ;">Submit</button>
+                    <button (click)="onClosepopup()" mat-raised-button type="submit" class="btn btn-outline-secondary"
+                        style="cursor: pointer;">Cancel</button>
+
+
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+    </div>
+</div>

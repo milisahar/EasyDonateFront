@@ -21,6 +21,13 @@ import { UpdateEventComponent } from './update-event/update-event.component';
 import { CreateEventComponent } from './create-event/create-event.component';
 import { DetailsEventComponent } from './details-event/details-event.component';
 import {MatDatepickerModule} from "@angular/material/datepicker";
+import { TaskListComponent } from './task-list/task-list.component';
+import { TaskDetailsComponent } from './task-details/task-details.component';
+import { AddCheckPointComponent } from './add-check-point/add-check-point.component';
+import { AddTaskComponent } from './add-task/add-task.component';
+import { AddHelpDemandComponent } from './add-help-demand/add-help-demand.component';
+import { HelpDemandListComponent } from './help-demand-list/help-demand-list.component';
+import { HelpDemandDetailsComponent } from './help-demand-details/help-demand-details.component';
 
 @NgModule({
     imports: [
@@ -49,7 +56,14 @@ import {MatDatepickerModule} from "@angular/material/datepicker";
     EventComponent,
     UpdateEventComponent,
     CreateEventComponent,
-    DetailsEventComponent
+    DetailsEventComponent,
+    TaskListComponent,
+    TaskDetailsComponent,
+    AddCheckPointComponent,
+    AddTaskComponent,
+    AddHelpDemandComponent,
+    HelpDemandListComponent,
+    HelpDemandDetailsComponent
   ],
   exports: [
     FooterComponent,

@@ -1,0 +1,88 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div  class="card-header card-header-success">
+                        
+                        <h4 class="card-title"> {{helpDemand.title}}'s Details</h4>
+                        <p class="card-category">You can only read this content only the sender can modify or add new requests !</p>
+                    </div>
+                    <div class="card-body">
+
+                        <div class="box">
+                            <div class="box-header">
+
+                            </div>
+                            <div class="box-body">
+                                <div class="row">
+                                    
+                                    <div  class="col-md-4 col-sm-6 col-xs-12">
+                                        <label>Help demand title </label>
+                                        <input [(ngModel)]="helpDemand.title"  name="titre" type="text" class="form-control" 
+                                        readonly style="text-align: center;">
+                                    </div>
+                                    
+                                    <div class="col-md-4 col-sm-6 col-xs-12">
+                                        <label>Urgency  </label>
+                                        <input [(ngModel)]="helpDemand.urgency" name="dateLimite" type="text"
+                                            class="form-control" readonly style="text-align: center;">
+                                    </div>
+                                    <div class="col-md-4 col-sm-6 col-xs-12">
+                                        <label>Limit date </label>
+                                        <input [(ngModel)]="helpDemand.dateDeCreation" name="dateLimite" type="date"
+                                            class="form-control" readonly style="text-align: center;">
+                                    </div>
+                                    <div></div>
+                                    <div class=" col-sm-12">
+                                        <label>Help demand content</label>
+                                        <input [(ngModel)]="helpDemand.content" name="description" type="text"
+                                            class="form-control height-120 textarea" readonly>
+
+                                    </div>
+                                    
+                                    <div class=" col-sm-12">
+                                        <label>Task in question details : Task title</label>
+                                        <input [(ngModel)]="task.title" name="description" type="text"
+                                            class="form-control height-120 textarea" readonly> 
+                                    </div>
+                             
+                                </div>
+
+
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                
+                <button (click)="openDialogTask(task.id)" mat-raised-button type="submit" class="btn btn-outline-success">Check the task</button>
+                <button (click)="onClosepopup()" mat-raised-button type="submit" class="btn btn-outline-secondary">Back to the list</button>
+
+</div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="card card-profile">
+                    <div class="card-avatar">
+                        <a href="javascript:void(0)">
+                            <img class="img" src="./assets/img/faces/marc.jpg" />
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-category text-gray">Assigned to informations </h6>
+                        <p><label>Full name : {{assignedTo.fullName}}</label></p>
+                        <p><label>Email : {{assignedTo.email}}</label></p>
+                        <p><label>Phone number : {{assignedTo.phoneNumber}}</label></p>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        
+       
+    </div>
+
+</div>

@@ -1,0 +1,66 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="card">
+                <div class="card-header card-header-success">
+                    <h4 class="card-title">Send a help request</h4>
+                    <p class="card-category">Carefully fill the required informations </p>
+                </div>
+                <div class="card-body">
+
+                    <div class="box">
+                        <div class="box-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label>Help demand's title *</label>
+                                    <input required [(ngModel)]="helpDemand.title" name="titre" type="text"
+                                        class="form-control">
+
+                                </div>
+                                
+                              <p></p>
+                              <div class="col-md-12">
+                                <label>Urgency *</label>
+                                <div>
+                                    <select required class="form-control" [(ngModel)]="helpDemand.urgency">
+                                        <option>HIGH</option>
+                                        <option>MEDIUM</option>
+                                        <option>LOW</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                              <p></p>
+
+                                <div class=" col-sm-12">
+                                    <label>Help demand's description * </label>
+                                    <input [(ngModel)]="helpDemand.content" name="description" type="text"
+                                        class="form-control height-120 textarea">
+
+                                </div>
+                                
+                                <p></p>
+                       
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                    <button (click)="addHelpDemand()" mat-raised-button type="submit" class="btn btn-outline-success"
+                        style="cursor: pointer ;">Submit</button>
+                    <button (click)="onClosepopup()" mat-raised-button type="submit" class="btn btn-outline-secondary"
+                        style="cursor: pointer;">Cancel</button>
+
+
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+    </div>
+</div>

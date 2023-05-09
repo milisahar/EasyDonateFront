@@ -1,0 +1,73 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="card">
+                <div class="card-header card-header-warning">
+                    <h4 class="card-title">Adding a new task</h4>
+                    <p class="card-category">Carefully fill the required informations </p>
+                </div>
+                <div class="card-body">
+
+                    <div class="box">
+                        <div class="box-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label>Task title *</label>
+                                    <input required [(ngModel)]="task.title" name="titre" type="text"
+                                        class="form-control">
+
+                                </div>
+                                <p></p>
+                                <div class="col-md-12">
+                                    <label>Urgency *</label>
+                                    <div>
+                                        <select required class="form-control" [(ngModel)]="task.urgency">
+                                            <option>HIGH</option>
+                                            <option>MEDIUM</option>
+                                            <option>LOW</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                                <p></p>
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <label>Strating date *</label>
+                                    <input required [(ngModel)]="task.startingDate" name="startingDate" type="date"
+                                        class="form-control">
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <label>Ending date *</label>
+                                    <input required [(ngModel)]="task.endingingDate" name="dateLimite" type="date"
+                                        class="form-control">
+
+                                </div>
+                                <p></p>
+                                <div class=" col-sm-12">
+                                    <label>Tasks description</label>
+                                    <input [(ngModel)]="task.description" name="description" type="text"
+                                        class="form-control height-120 textarea">
+
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                    <button (click)="onAddTask()" mat-raised-button type="submit" class="btn btn-outline-success"
+                        style="cursor: pointer ;">Add task</button>
+                    <button (click)="onClosepopup()" mat-raised-button type="submit" class="btn btn-outline-secondary"
+                        style="cursor: pointer;">Cancel</button>
+
+
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+    </div>
+</div>

@@ -1,9 +1,12 @@
+import { User } from "./user";
 export class Task {
-    id : any;
-    description : any;
-    urgency : any;
-    startingDate : any;
-    endingingDate : any;
+    id !: number;
+    title : string="";
+    description : string = "";
+    urgency : string = "";
+    startingDate !: Date;
+    endingingDate !: Date;
     progress : any;
+    assignedTo : User;
 
 }

@@ -1,0 +1,69 @@
+<div class="card">
+    <div class="card-header card-header-success">
+        <h4 class="card-title">Help demands</h4>
+        <p class="card-category">Our appreciated volenteers or dearest stuff members can send help demands as a call for
+            help. <br> You can always upgrade a help demand to a task !</p>
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-sm-4" style="margin: auto; display: block;">
+        <mat-form-field class="example-full-width">
+            <input matInput type="text" placeholder="Search for a help demand by name" [(ngModel)]="search">
+            
+        </mat-form-field>
+        <!--
+        <input matInput type="date" [(ngModel)]="dateD">-->
+    </div>
+</div>
+<div class="card-body table-responsive">
+    <table class="table table-hover">
+        <thead class="text-success">
+            <th class="align-middle">Upload date</th>
+            <th class="align-middle">Title</th>
+            <th class="align-middle">Urgency</th>
+            <th class="align-middle">Actions</th>
+
+        </thead>
+        <div *ngIf=" numberOfDemands === 0 ; else show">
+            <h2> No help demand found !</h2>
+        </div>
+        <ng-template #show>
+            <tbody *ngFor="let hd of listhelpDemand">
+                <tr *ngIf="hd.title===search || toLower( hd.title) === toLower(search) || search === null || search === '' || doescontain(hd.title, search)==true " >
+                    <td class="align-middle"> {{hd.dateDeCreation}}</td>
+                    <td class="align-middle"> {{hd.title}} </td>
+
+                    <td *ngIf="hd.urgency === 'HIGH'" class="align-middle"> <i
+                            class="large material-icons">notifications_active</i></td>
+                    <td *ngIf="hd.urgency === 'MEDIUM'" class="align-middle"> <i
+                            class="large material-icons">notifications</i></td>
+                    <td *ngIf="hd.urgency === 'LOW'" class="align-middle"> <i
+                            class="large material-icons">notifications_paused</i></td>
+                    <td class="align-middle" *ngIf="hd.respondedTo === false">
+                        <i class="material-icons" (click)="openDialog(hd.id)" style="cursor: pointer;"
+                            title="Help demand details">info_outline</i>
+                        <i class="material-icons" (click)="onUpgradeTask(hd)" style="cursor: pointer;"
+                            title="Update it to a task ?">present_to_all</i>
+                        <i class="material-icons" (click)="respondToHelpRequest(1,hd)" style="cursor: pointer;"
+                            title="Respond to the request?">person_pin</i>
+                    </td>
+                    <td class="align-middle" *ngIf="hd.respondedTo === true">
+                        <em (click)="onDeleteHelpDemand(hd)" title="Delete request ?"
+                            style="cursor: pointer;">Treated</em>
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </ng-template>
+
+    </table>
+
+    <div>
+
+    </div>
+</div>
+
+<!--NEWnewNEWnew-->
