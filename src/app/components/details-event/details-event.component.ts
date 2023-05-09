@@ -48,6 +48,7 @@ delete(comment:any){
   let dialogRef =  this.dialog.open(ConfirmationComponent)
   dialogRef.afterClosed().subscribe(result => {
     if(result==true){
+      console.log(comment)
       this.EventSerivce.deleteComment(comment.id).subscribe(res=>{
         this.getComments()
       })
