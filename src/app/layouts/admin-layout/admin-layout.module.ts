@@ -17,8 +17,8 @@ import {MatRippleModule} from '@angular/material/core';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSelectModule} from '@angular/material/select';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   imports: [
@@ -33,18 +33,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     MatInputModule,
     MatSelectModule,
     MatTooltipModule,
-    FontAwesomeModule,
-
     MatDatepickerModule,
-<<<<<<< HEAD
-
-    MatNativeDateModule,
-    
-
-=======
     MatNativeDateModule
     
->>>>>>> origin/Farah-Front
   ],
   declarations: [
     DashboardComponent,

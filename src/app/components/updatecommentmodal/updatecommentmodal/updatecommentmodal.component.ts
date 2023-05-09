@@ -43,7 +43,7 @@ export class UpdatecommentmodalComponent implements OnInit {
       const id = this.comment.id;
       this.commentService.updateArticleComment(id, comment).subscribe(() => {
         // Redirect to the updated comment's page
-        this.router.navigate(['/article:id']);
+        this.router.navigate(['/allarticles']);
       });
     }}
 }

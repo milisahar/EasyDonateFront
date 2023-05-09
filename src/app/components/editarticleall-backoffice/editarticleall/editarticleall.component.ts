@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Category } from 'app/shared/Models/category/category';
 import { ArticleService } from 'app/shared/Services/ArticleService/article.service';
-import { CategoryService } from 'app/shared/Services/Category/category.service';
 
 @Component({
   selector: 'app-editarticleall',
