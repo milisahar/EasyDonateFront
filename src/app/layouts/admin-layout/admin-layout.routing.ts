@@ -14,6 +14,7 @@ import { UpdateFundraiserComponent } from 'app/components/updateFundraiser/updat
 import { HomeComponent } from 'app/components/home/home.component';
 import { AddFundRaiserComponent } from 'app/components/add-fund-raiser/add-fund-raiser.component';
 import { AddFundraiserComponent } from 'app/components/add-fundraiser/add-fundraiser.component';
+import {AddDonationComponent} from "../../components/add-donation/add-donation.component";
 
 export const AdminLayoutRoutes: Routes = [
     // {
@@ -71,7 +72,8 @@ export const AdminLayoutRoutes: Routes = [
     {path:'update-fundraiser/:id',component:UpdateFundraiserComponent},
     { path: 'notifications',  component: NotificationsComponent },
     { path: 'upgrade',        component: UpgradeComponent },
-    { path: 'addFundRaiser',        component: AddFundRaiserComponent },
     { path: 'addFundraiser2',        component: AddFundraiserComponent },
-    
+    { path: 'addFundRaiser',        component: AddFundRaiserComponent },
+    { path: 'addDonation',        component: AddDonationComponent },
+
 ];

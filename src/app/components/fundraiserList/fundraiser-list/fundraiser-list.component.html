@@ -2,55 +2,56 @@
 
                         <div  class="card-header card-header-primary" style="background-color:transparent;padding: 20px;display: flex ;">
                             <h4 class="card-title mt-0" style="padding-top: 18px;"> fundraiser List</h4>
-                        
+
                                 <button (click)="add()" style="margin-left: 75%;height: 50px;" class="btn btn-success">add</button>
                                 <button (click)="addF()"  class="btn btn-success">add</button>
-                                <div>
-                                    
-                                </div>
-                            
+
+
                         </div>
                         <div class="card-body">
                             <div class="container--parent">
                                 <div class="container--child">
-                                        <div class="container--steps">
-                            
-                                                <section *ngFor="let item of fundraisers" class="container--text out-of-box">
-                                                    <div class="head">
-                                                    <div class="buttons">
-                                                    <button mat-icon-button style="border: transparent;" >
-                                                        <i class="material-icons" style="color: red;"(click)="updateFundraiser(item.fundraiser_id)">edit</i>
-                                                    </button>
-                                                        <button mat-icon-button style="border: transparent;">
-                                                            <i class="material-icons" style="color: red;"(click)="deleteFundraiser(item.fundraiser_id)">delete_outline</i>
-                                                          </button>
-                                                        </div>
-                                                        <header>
-                                                                <h4 class="title">{{item.title}}</h4>
-                                                        </header>
-                                                        </div>
-                                                        <article style="text-align: left; ">
-                                                                <p class="title">{{item.goal}}</p>
-                                                                <p class="title">{{item.description}}</p>
-                                                                <div ><h5 class="title" style="text-align: left;margin-left: 15px;color: red;">deadline :{{item.deadline | date:"MM/dd/yy"}}</h5></div>
-                                                            </article>
-                                                        <div >
-                                                            <button mat-icon-button style="border: transparent;">
-                                                                <i class="material-icons" style="color: red;">favorite_border</i>
-                                                            </button>
-                                                             
-                                                        </div>
+                                    <div class="container--steps">
 
-                                                </section>
-                                        </div>
+                                        <section *ngFor="let item of fundraisers" >
+                                            <div class="cardContainer inactive">
+                                                <div class="card">
+                                                    <div class="side front">
+                                                        <div style="display: flex; justify-content: flex-end; margin-bottom: 10px;background-color: transparent;">
+                                                            <button mat-icon-button style="border: transparent;" (click)="updateFundraiser(item.fundraiser_id)">
+                                                                <i class="material-icons" style="color: red;">edit</i>
+                                                            </button>
+                                                            <button mat-icon-button style="border: transparent;" (click)="deleteFundraiser(item.fundraiser_id)">
+                                                                <i class="material-icons" style="color: red;">delete_outline</i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="img img1">
+                                                            <button class="btn btn-success btnimage">donate now<i class="material-icons" style="color: red;margin-left: 8px">favorite_border</i></button>
+                                                        </div>
+                                                        <div class="info">
+                                                            <h2>{{item.title}}</h2>
+                                                            <p>{{item.goal}}</p>
+                                                            <p>{{item.description}}</p>
+
+                                                         <h5 class="date" style="font-weight: bold;margin-top: 20px">Deadline: {{item.deadline | date:"MM/dd/yy"}}</h5>
+                                                        <div style="display: inline-flex; justify-content: space-between">
+                                                        <div class="price" style="margin-left: 0%;transform: translateX(-30%)translateY(-20%);">
+                                                                <h5>${{item.target}}</h5>
+                                                                <h6>target</h6>
+                                                            </div>
+                                                            <div class="price" style="transform: translateX(+40%)translateY(-20%);">
+                                                                <h5 >${{item.progressStatus}}</h5>
+                                                                <h6>collected</h6>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                </div>
+
+                                        </section>
+                                    </div>
                                 </div>
                             </div>
-
                         </div>
-
-     
-    
-
-
-              
-        

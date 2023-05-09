@@ -18,7 +18,6 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import { AddFundRaiserComponent } from './add-fund-raiser/add-fund-raiser.component';
 import { AddFundraiserComponent } from './add-fundraiser/add-fundraiser.component';
-import { AddDonationComponent } from './add-donation/add-donation.component';
 import { AddFundDonationComponent } from './add-fund-donation/add-fund-donation.component';
 
 @NgModule({
@@ -46,7 +45,6 @@ import { AddFundDonationComponent } from './add-fund-donation/add-fund-donation.
     ConfirmationComponent,
     AddFundRaiserComponent,
     AddFundraiserComponent,
-    AddDonationComponent,
     AddFundDonationComponent
   ],
   exports: [

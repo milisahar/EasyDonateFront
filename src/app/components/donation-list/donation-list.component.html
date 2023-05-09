@@ -4,33 +4,74 @@
         <div class="container">
           <body>
             <div class="cover">
-              <h1>Discover what's out there.</h1>
+              <h1>Thank you for your help and your support </h1>
               <form  class="flex-form">
-                <label for="from">
+                <label >
                   <i class="ion-location"></i>
                 </label>
-                <button type="button" class="btn btn-primary btn-lg" value="Search">hello</button>
-              </form>
+                <div class="buttons">
+                <button type="button" class="btn btn-primary btn-lg" value="Search" style="background-color: #CC9933; border-color: rgb(27, 27, 68);width: 243px;height: 49px;margin-right: 20px;" (click)="showDonations = 1; scroll()">Your donations</button>
+                <button type="button" class="btn btn-primary btn-lg" value="Search" style=" background-color: #CC9933; border-color: rgb(27, 27, 68); width: 243px; height: 49px;margin-left: 20px; "(click)="showDonations = 2">Your fund-donations</button>
             </div>
-        </body>
-
-
-
-
-
-
-        <div class="row">
+            </form>
+            </div>
+            </body>
+            <div class="row" *ngIf="showDonations===1" >    
         
-            <div class="col-md-12">
-                <div class="card card-plain">
-                    <div class="card-header card-header-danger">
-                        <h4 class="card-title mt-0"> Donations List</h4>
-                        <p class="card-category"> Here is a list of all the donations</p>
+                <div class="col-md-12">
+                    <div  class="card card-plain">
+                        <div class="card-header card-header-warning">
+                            <h4 class="card-title mt-0"> Donations List</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead class="">
+                                        <th>
+                                            ID
+                                        </th>
+                                        <th>
+                                            Amount
+                                        </th>
+                                        <th>
+                                          Date
+                                        </th>
+                                        <th>
+                                          User
+                                        </th>
+                                    </thead>
+                                    <tbody *ngFor="let d of donations">
+                                        <tr >
+                                            <td>
+                                                {{d.id}}
+                                            </td>
+                                            <td>
+                                              {{d.sum}}
+                                          </td>
+                                          <td>
+                                              {{d.donationDate}}
+                                          </td>
+                                          <td>
+                                              {{d.userRef.firstName}}
+                                          </td>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table table-hover">
-                                <thead class="">
+                </div>
+                </div>
+            <div class="row" *ngIf="showDonations===2" >
+
+                <div class="col-md-12">
+                    <div  class="card card-plain">
+                        <div class="card-header" style="background-color: #2a3f6c ">
+                            <h4 class="card-title mt-0" style="color: white"> Fund donations List</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead class="">
                                     <th>
                                         ID
                                     </th>
@@ -38,36 +79,34 @@
                                         Amount
                                     </th>
                                     <th>
-                                      Date
+                                        Fundraiser Event
                                     </th>
                                     <th>
-                                      User
+                                        User
                                     </th>
-                                </thead>
-                                <tbody *ngFor="let d of donations">
+                                    </thead>
+                                    <tbody *ngFor="let f of fundDonations">
                                     <tr >
                                         <td>
-                                            {{d.id}}
+                                            {{f.id}}
                                         </td>
                                         <td>
-                                          {{d.sum}}
-                                      </td>
-                                      <td>
-                                          {{d.donationDate}}
-                                      </td>
-                                      <td>
-                                          {{d.userRef.firstName}}
-                                      </td>
-                                </tbody>
-                            </table>
+                                            {{f.sum}}
+                                        </td>
+                                        <td>
+                                            {{f.fundraiserRef.title}}
+                                        </td>
+                                        <td>
+                                            {{f.userRef.firstName}}
+                                        </td>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
-  </div>
- 
-
-
-
+</div>

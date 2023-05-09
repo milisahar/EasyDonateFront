@@ -12,7 +12,7 @@ declare var $: any;
 })
 export class FundraiserListComponent implements OnInit {
   fundraisers : Fundraiser[]=[];
-
+  rotate : number=0
   constructor( private fundraiserService: FundraiserService,public dialog: MatDialog, private router : Router) {}
     showNotification(from, align){
       const type = ['success'];
@@ -76,6 +76,7 @@ export class FundraiserListComponent implements OnInit {
   addF(){
     this.router.navigate(['addFundraiser2'])
   }
+
 
 
 

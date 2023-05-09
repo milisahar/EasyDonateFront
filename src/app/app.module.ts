@@ -10,7 +10,6 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   imports: [
@@ -24,8 +23,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HttpClientModule,
     MatFormFieldModule,
     MatInputModule,
-    MatToolbarModule,
-    FontAwesomeModule
+    MatToolbarModule
     
   ],
   declarations: [
