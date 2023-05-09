@@ -30,12 +30,6 @@ import { AddFundRaiserComponent } from 'app/components/add-fund-raiser/add-fund-
 import { AddFundraiserComponent } from 'app/components/add-fundraiser/add-fundraiser.component';
 import { CreateEventComponent } from 'app/components/create-event/create-event.component';
 
-import { UpdateEventComponent } from 'app/components/update-event/update-event.component';
-import { DetailsEventComponent } from 'app/components/details-event/details-event.component';
-import { EventComponent } from 'app/components/event/event.component';
-import { DetailsEventComponent } from 'app/components/details-event/details-event.component';
-import { UpdateEventComponent } from 'app/components/update-event/update-event.component';
-import { EventComponent } from 'app/components/event/event.component';
 
 export const AdminLayoutRoutes: Routes = [
     // {
@@ -101,6 +95,7 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'notifications',  component: NotificationsComponent },
     { path: 'upgrade',        component: UpgradeComponent },
 
+
     { path: 'addFundRaiser',        component: AddFundRaiserComponent },
     { path: 'addFundraiser2',        component: AddFundraiserComponent },
 
@@ -108,5 +103,18 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'update-Event/:id',        component: UpdateEventComponent },
     { path: 'details-Event/:id',        component: DetailsEventComponent },
     { path: 'event',        component: EventComponent },
+  
+    {  path: 'AddImage/:id',component:UploadImageComponent},
+
+    
+    { path: 'commentsbyarticle/:id', component: CommentsbackendComponent },
+    
+    
+    {  path: 'editarticleall/:id',component:EditarticleallComponent},
+
+
+    {  path: 'addtags/:id',component:EditarticleBackofficeComponent},
+   {path:'allarticlesbackoffice',component:AllarticlesBackofficeComponent},
+    {path:'addarticle',component:AddarticleComponent},
 
 ];
