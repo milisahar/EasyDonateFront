@@ -1,12 +1,7 @@
 
 
-                        <div  class="card-header card-header-primary" style="background-color:transparent;padding: 20px;display: flex ;">
-                            <h4 class="card-title mt-0" style="padding-top: 18px;"> fundraiser List</h4>
-
-                                <button (click)="add()" style="margin-left: 75%;height: 50px;" class="btn btn-success">add</button>
-                                <button (click)="addF()"  class="btn btn-success">add</button>
-
-
+                        <div  class="card-header card-header-primary" style="background-color:transparent;padding: 0px;display: flex ;">
+                                <button (click)="addF()" style="margin-right: 20%;height: 50px;" class="btn btn-success">Create Fundraiser</button>
                         </div>
                         <div class="card-body">
                             <div class="container--parent">
@@ -26,7 +21,7 @@
                                                             </button>
                                                         </div>
                                                         <div class="img img1">
-                                                            <button class="btn btn-success btnimage">donate now<i class="material-icons" style="color: red;margin-left: 8px">favorite_border</i></button>
+                                                            <button class="btn btn-success btnimage" (click)="addFundDonation(item.fundraiser_id)">donate now<i class="material-icons" style="color: red;margin-left: 8px">favorite_border</i></button>
                                                         </div>
                                                         <div class="info">
                                                             <h2>{{item.title}}</h2>

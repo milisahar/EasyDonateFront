@@ -69,12 +69,11 @@ export class FundraiserListComponent implements OnInit {
   updateFundraiser(id:number){
     this.router.navigate(['update-fundraiser',id])
   }
-
-  add(){
-    this.router.navigate(['addFundRaiser'])
-  }
   addF(){
-    this.router.navigate(['addFundraiser2'])
+    this.router.navigate(['addFundraiser'])
+  }
+  addFundDonation(id:number){
+    this.router.navigate(['addFundDonation',id])
   }
 
 

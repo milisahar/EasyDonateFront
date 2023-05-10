@@ -12,9 +12,9 @@ import { DonationListComponent } from 'app/components/donation-list/donation-lis
 import { FundraiserListComponent } from 'app/components/fundraiserList/fundraiser-list/fundraiser-list.component';
 import { UpdateFundraiserComponent } from 'app/components/updateFundraiser/update-fundraiser/update-fundraiser.component';
 import { HomeComponent } from 'app/components/home/home.component';
-import { AddFundRaiserComponent } from 'app/components/add-fund-raiser/add-fund-raiser.component';
 import { AddFundraiserComponent } from 'app/components/add-fundraiser/add-fundraiser.component';
-import {AddDonationComponent} from "../../components/add-donation/add-donation.component";
+import {AddDonationsComponent} from "../../components/add-donations/add-donations.component";
+import {AddFundDonationComponent} from "../../components/add-fund-donation/add-fund-donation.component";
 
 export const AdminLayoutRoutes: Routes = [
     // {
@@ -72,8 +72,7 @@ export const AdminLayoutRoutes: Routes = [
     {path:'update-fundraiser/:id',component:UpdateFundraiserComponent},
     { path: 'notifications',  component: NotificationsComponent },
     { path: 'upgrade',        component: UpgradeComponent },
-    { path: 'addFundraiser2',        component: AddFundraiserComponent },
-    { path: 'addFundRaiser',        component: AddFundRaiserComponent },
-    { path: 'addDonation',        component: AddDonationComponent },
+    { path: 'addFundraiser',        component: AddFundraiserComponent },
+
 
 ];

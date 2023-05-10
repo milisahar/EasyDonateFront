@@ -3,41 +3,45 @@
       <h2> update</h2>
     <div class="example-container">
       <mat-form-field appearance="fill">
-        <mat-label>title</mat-label>
-        <input matInput placeholder="pat@example.com"  formControlName="title" >
+        <mat-label>Title</mat-label>
+        <input matInput placeholder="title"  formControlName="title" >
         <mat-error >test</mat-error>
       </mat-form-field>
     </div>
     <div class="example-container">
       <mat-form-field appearance="fill">
-        <mat-label>goal </mat-label>
-        <input matInput placeholder="pat@example.com" formControlName="goal" >
+        <mat-label>Goal </mat-label>
+        <input matInput placeholder="goal" formControlName="goal" >
         <mat-error >test</mat-error>
       </mat-form-field>
     </div>
     <div class="example-container">
       <mat-form-field appearance="fill">
-        <mat-label>description</mat-label>
-        <input matInput placeholder="pat@example.com" formControlName="description" >
+        <mat-label>Description</mat-label>
+        <input matInput placeholder="description"  formControlName="description" >
         <mat-error >test</mat-error>
       </mat-form-field>
     </div>
     
     <mat-form-field appearance="fill">
-      <mat-label>status</mat-label>
-      <mat-select  formControlName="status">
+      <mat-label>type</mat-label>
+      <mat-select  formControlName="type">
         <mat-option *ngFor="let status of status" [value]="status.value" >
           {{status.viewValue}}
         </mat-option>
       </mat-select>
     </mat-form-field>
+
     <div class="example-container">
       <mat-form-field appearance="fill">
-        <mat-label>target</mat-label>
-        <input matInput placeholder="pat@example.com" formControlName="target"  >
+        <mat-label>Target</mat-label>
+        <input matInput  placeholder="target" formControlName="target" >
         <mat-error >test</mat-error>
       </mat-form-field>
     </div>
+
     <button class="btn btn-primary button" (click)="updatefundraiser()">Update</button>
   </div>
 </form>
+
+

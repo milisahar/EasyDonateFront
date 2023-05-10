@@ -19,6 +19,7 @@ export class UpdateFundraiserComponent implements OnInit {
   fundraiser:any
   pendingStatus:any
   id:any
+  a : any
   status: status[] = [
     {value: 'DONE', viewValue: 'Done'},
     {value: 'NOT_YET', viewValue: 'Not Yet'},
@@ -59,11 +60,13 @@ export class UpdateFundraiserComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.fundraiserService.getFundraiserById(params['id']).subscribe(res=>{
         this.id=res.fundraiser_id
-        this.fundraiserForm.get('title').setValue(res.title)
-        this.fundraiserForm.get('goal').setValue(res.goal)
-        this.fundraiserForm.get('description').setValue(res.description)
-        this.fundraiserForm.get('status').setValue(res.pendingStatus)
-        this.fundraiserForm.get('target').setValue(res.target)
+        this.fundraiser=res
+        console.log(this.fundraiser)
+        this.fundraiserForm.get('title').setValue(this.fundraiser.title)
+        this.fundraiserForm.get('goal').setValue(this.fundraiser.goal)
+        this.fundraiserForm.get('description').setValue(this.fundraiser.description)
+        this.fundraiserForm.get('status').setValue(this.fundraiser.pendingStatus)
+        this.fundraiserForm.get('target').setValue(this.fundraiser.target)
        
       })
     });
@@ -94,6 +97,7 @@ updatefundraiser(){
     this.showNotification('top','right')
     this.router.navigate(['fundraiser'])
   })
+  console.log(this.fundraiser)
 }
 
 }

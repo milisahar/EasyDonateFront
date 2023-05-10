@@ -16,9 +16,10 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
-import { AddFundRaiserComponent } from './add-fund-raiser/add-fund-raiser.component';
 import { AddFundraiserComponent } from './add-fundraiser/add-fundraiser.component';
 import { AddFundDonationComponent } from './add-fund-donation/add-fund-donation.component';
+import { AddDonationsComponent } from './add-donations/add-donations.component';
+import {MatDatepickerModule} from "@angular/material/datepicker";
 
 @NgModule({
     imports: [
@@ -43,9 +44,9 @@ import { AddFundDonationComponent } from './add-fund-donation/add-fund-donation.
     UpdateFundraiserComponent,
     HomeComponent,
     ConfirmationComponent,
-    AddFundRaiserComponent,
     AddFundraiserComponent,
-    AddFundDonationComponent
+    AddFundDonationComponent,
+      AddDonationsComponent
   ],
   exports: [
     FooterComponent,

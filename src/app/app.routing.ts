@@ -5,6 +5,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { HomeComponent } from './components/home/home.component';
+import {AddDonationsComponent} from "./components/add-donations/add-donations.component";
+import {AddFundDonationComponent} from "./components/add-fund-donation/add-fund-donation.component";
 
 const routes: Routes =[
   {
@@ -23,7 +25,9 @@ const routes: Routes =[
       path: '',
       loadChildren: () => import('./layouts/admin-layout/admin-layout.module').then(m => m.AdminLayoutModule)
     }]
-  }
+  },
+    { path: 'addDonations',component: AddDonationsComponent },
+    {path:'addFundDonation/:id',component:AddFundDonationComponent},
 ];
 
 @NgModule({
