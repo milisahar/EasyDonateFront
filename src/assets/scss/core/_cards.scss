@@ -161,10 +161,12 @@
         }
     }
 
-    .card-header-primary .card-icon,
+    .card-header-primary .card-icon, 
+    
     .card-header-primary .card-text,
     .card-header-primary:not(.card-header-icon):not(.card-header-text),
-    &.bg-primary,
+    &.card-color-custom,
+
     &.card-rotate.bg-primary .front,
     &.card-rotate.bg-primary .back{
       background: linear-gradient(60deg, $purple-400, $purple-600);

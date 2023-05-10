@@ -1,0 +1,29 @@
+<div style="margin: 50px auto; width: 50%;">
+  <form [formGroup]="articleForm" (submit)="onSubmit()">
+    <div class="row">
+      <div class="col-md-3">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Title" name="title"  formControlName="title" disabled>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Description" name="description" type="text"  formControlName="description">
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <label>Content</label>
+        <mat-form-field class="example-full-width">
+          <textarea matInput placeholder="Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo." name="content" formControlName="content"></textarea>
+        </mat-form-field>
+      </div>
+    </div>
+    
+    <button mat-raised-button type="submit" class="btn pull-right">Save Changes</button>
+    <div class="clearfix"></div>
+  </form>
+</div>

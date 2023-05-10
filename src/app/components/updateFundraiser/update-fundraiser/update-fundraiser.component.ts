@@ -76,7 +76,7 @@ export class UpdateFundraiserComponent implements OnInit {
   createform(){
     this.fundraiserForm = this.fb.group({
       title: [''],
-      goal:[''],
+      place:[''],
       description:[''],
       status:[''],
       target:['']

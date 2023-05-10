@@ -37,11 +37,11 @@ $btn-box-shadow:                 none !default;
 $btn-active-box-shadow:          none !default; // inset 0 3px 5px rgba(0,0,0,.125)
 
 //
-$btn-primary-color:              #fff !default;
+$btn-primary-color:              #240e4a !default;
 $btn-primary-bg:                 $brand-primary !default;
 $btn-primary-border-color:             $btn-primary-bg !default;
 //
-$btn-secondary-color:            $gray-dark !default;
+$btn-secondary-color:            #a6982d !default;
 $btn-secondary-bg:               $body-bg !default; // #fff
 $btn-secondary-border-color:           #ccc !default;
 //
@@ -65,8 +65,8 @@ $btn-rose-color:                 #fff !default;
 $btn-rose-bg:                    $brand-rose !default;
 $btn-rose-border-color:              $btn-rose-bg !default;
 
-$btn-default-color:                 #fff !default;
-$btn-default-bg:                    $gray-color !default;
+$btn-default-color:                 $amber-800 !default;
+$btn-default-bg:                    $indigo-900 !default;
 $btn-default-border-color:              $btn-default-bg !default;
 //
 $btn-link-disabled-color:        $gray-light !default;

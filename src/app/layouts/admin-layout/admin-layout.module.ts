@@ -17,7 +17,8 @@ import {MatRippleModule} from '@angular/material/core';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSelectModule} from '@angular/material/select';
-
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 
 @NgModule({
@@ -27,11 +28,16 @@ import {MatSelectModule} from '@angular/material/select';
     FormsModule,
     ReactiveFormsModule,
     MatButtonModule,
+    FormsModule,
     MatRippleModule,
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
     MatTooltipModule,
+    MatDatepickerModule,
+    MatNativeDateModule
+    
+
   ],
   declarations: [
     DashboardComponent,
