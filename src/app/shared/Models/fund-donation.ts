@@ -5,5 +5,9 @@ export class FundDonation {
     id!: number
     fundraiserRef: Fundraiser
     sum!: number
-    userRef: User
+    userRef: User ={
+        id:1,
+        firstName:"sahar",
+        lastName:"mili"
+    }
 }

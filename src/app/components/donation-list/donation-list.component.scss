@@ -32,7 +32,7 @@ html {
 body {
     font-family: 'Lato', sans-serif;
     margin: 0;
-    background: url('../../../assets/donation.jpeg') no-repeat center center fixed;
+    background: url('../../../assets/img/larm-rmah-AEaTUnvneik-unsplash.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -66,9 +66,9 @@ body {
   
   
   button{
-    background: #8b9c0c;
+    background: gold;
     border: 1px solid #05771b;
-    color: #284f04;
+    color: gold;
   }
   
   .cover  {
@@ -102,6 +102,15 @@ body {
   
     .cover {
       padding: 20px;
+    }
+
+    .buttons{
+      color: gold !important;
+      margin-top: 50px;
+      margin-right: 30px;
+    }
+    .card-header{
+      background-color: gold !important;
     }
   
   }  

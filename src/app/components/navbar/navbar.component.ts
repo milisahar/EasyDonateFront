@@ -122,4 +122,7 @@ export class NavbarComponent implements OnInit {
       }
       return 'Dashboard';
     }
+    redirect(){
+        this.router.navigate(['/addDonations'])
+    }
 }

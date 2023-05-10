@@ -16,6 +16,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
+import { AddFundraiserComponent } from './add-fundraiser/add-fundraiser.component';
 import { AllarticlesComponent } from './allarticles/allarticles.component';
 import { ArticleComponent } from './article/article.component';
 import { CommentComponent } from './comment/comment.component';
@@ -36,6 +37,8 @@ import { EventComponent } from './event/event.component';
 import { CreateEventComponent } from './create-event/create-event.component';
 import { AddDonationComponent } from './add-donation/add-donation.component';
 import { AddFundDonationComponent } from './add-fund-donation/add-fund-donation.component';
+import { AddDonationsComponent } from './add-donations/add-donations.component';
+import {MatDatepickerModule} from "@angular/material/datepicker";
 
 @NgModule({
   imports: [
@@ -61,6 +64,9 @@ import { AddFundDonationComponent } from './add-fund-donation/add-fund-donation.
     UpdateFundraiserComponent,
     HomeComponent,
     ConfirmationComponent,
+    AddFundraiserComponent,
+    AddFundDonationComponent,
+      AddDonationsComponent,
     AllarticlesComponent,
     ArticleComponent,
     CommentComponent,
@@ -73,18 +79,14 @@ import { AddFundDonationComponent } from './add-fund-donation/add-fund-donation.
     SuccessComponent,
     EditarticleallComponent,
     UploadImageComponent,
-    ConfirmationComponent,
     EventComponent,
     UpdateEventComponent,
     CreateEventComponent,
     DetailsEventComponent,
-    ConfirmationComponent,
-    AddFundRaiserComponent,
-    AddFundraiserComponent,
-    AddDonationComponent,
-    AddFundDonationComponent
+  
+ 
     
-    
+   
   ],
   exports: [
     FooterComponent,

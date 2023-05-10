@@ -12,7 +12,7 @@ declare var $: any;
 })
 export class FundraiserListComponent implements OnInit {
   fundraisers : Fundraiser[]=[];
-
+  rotate : number=0
   constructor( private fundraiserService: FundraiserService,public dialog: MatDialog, private router : Router) {}
     showNotification(from, align){
       const type = ['success'];
@@ -69,13 +69,13 @@ export class FundraiserListComponent implements OnInit {
   updateFundraiser(id:number){
     this.router.navigate(['update-fundraiser',id])
   }
-
-  add(){
-    this.router.navigate(['addFundRaiser'])
-  }
   addF(){
-    this.router.navigate(['addFundraiser2'])
+    this.router.navigate(['addFundraiser'])
   }
+  addFundDonation(id:number){
+    this.router.navigate(['addFundDonation',id])
+  }
+
 
 
 
